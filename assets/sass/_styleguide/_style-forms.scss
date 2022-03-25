@@ -1,0 +1,581 @@
+// main: ../style.scss
+
+:root {
+    --form-bg-color: var(--color-base-white);
+
+    --form-font-color-light: var(--color-base-white);
+    --form-font-color-dark: var(--color-base-black);
+
+    --form-input-font-size: 0.9375rem;
+
+    --form-border-color: var(--color-neutral-0);
+
+    --form-label-color: var(--color-base-black);
+    --form-label-font: var(--font-tertiary);
+
+    --form-placeholder-color: var(--color-neutral-0);
+}
+
+%rounded-label-focus-state {
+    top: -8px;
+    left: 20px;
+    font-family: var(--font-tertiary);
+    @include x-rem(font-size, 12px);
+    color: var(--color-primary);
+    width: fit-content;
+    padding: 0 5px;
+}
+
+form {
+    width: 100%;
+    height: auto;
+}
+
+input {
+    accent-color: var(--color-primary);
+}
+
+textarea {
+    height: 150px;
+
+    @include mq($from: tablet-portrait) {
+        height: 165px;
+    }
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-check-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    transition: all 0.15s ease-out 0s;
+    background: var(--form-bg-color);
+    border: solid 1px var(--form-border-color);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+    margin-top: unset;
+
+    &:hover {
+        background-color: var(--color-neutral-4);
+        border-color: var(--color-primary)
+    }
+
+    &:checked::after {
+        -webkit-animation: click-wave 0.65s;
+        -moz-animation: click-wave 0.65s;
+        animation: click-wave 0.65s;
+        background: var(--color-primary);
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        border-radius: inherit;
+    }
+
+    &[type="checkbox"] {
+        border-radius: 3px;
+    }
+
+    &[type="checkbox"]:checked {
+        background-color: var(--color-primary);
+    }
+
+    &[type="checkbox"]:checked::before {
+        width: 100%;
+        height: 100%;
+        display:flex;
+        content: '\f00c';
+        font-size: 10px;
+        font-weight:bold;
+        position: absolute;
+        align-items:center;
+        justify-content:center;
+        font-family:'Font Awesome 5 Free';
+    }
+
+    &[type="radio"] {
+        border-radius: 50%;
+    }
+
+    &[type="radio"]:checked {
+        border: solid 2px var(--color-primary);
+    }
+    &[type="radio"]:before{
+        background-color: var(--color-primary);
+        border-radius: inherit;
+        display:flex;
+        content: '';
+        font-weight:bold;
+        position: absolute;
+        align-items:center;
+        justify-content:center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.33s;
+        width: 60%;
+        height: 60%;
+        opacity: 0;
+    }
+
+    &[type="radio"]:checked::before {
+        opacity: 1;
+    }
+}
+
+
+.frm__label {
+    color: var(--form-label-color);
+    @include x-rem(font-size, 16px);
+    font-family: var(--form-label-font);
+
+    .frm__label--required {
+        color: $oc-red-5;
+    }
+}
+
+.frm__input {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--form-border-color);
+    background-color: var(--form-bg-color) !important;
+    font-size: var(--form-input-font-size);
+    border-radius: 0.3rem;
+    color: var(--form-font-color-dark);
+    width: 100%;
+    padding: 0.6rem;
+    transition: all 0.33s;
+    min-height: 45px;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+        box-shadow: 0;
+        outline: 0;
+        border-color: var(--color-primary);
+        color: var(--form-font-color-dark);
+     
+    }
+
+    &::-webkit-input-placeholder {
+        /* Edge */
+        color: var(--form-placeholder-color);
+    }
+
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: var(--form-placeholder-color);
+    }
+
+    &::placeholder {
+        color: var(--form-placeholder-color);
+    }
+}
+
+.frm__input--line {
+    border: transparent;
+    background-color: transparent !important;
+    border-bottom: solid 1px var(--color-neutral-2);
+    border-radius: 0px;
+}
+
+.frm__placeholder {
+    color: var(--form-placeholder-color);
+}
+
+.form-control--disabled,
+.form-control[disabled],
+.form-control[readonly] {
+    cursor: not-allowed;
+}
+
+.form-control[aria-invalid="true"],
+.form-control--error {
+    border-color: var(--color-error);
+
+    // &:focus {
+    //     // box-shadow: 0px 0px 0px 2px alpha(var(--color-error), 0.2);
+    // }
+}
+
+.frm__select-group {
+    position: relative;
+
+    .select__icon {
+        position: absolute;
+        font-size: 18px;
+        right: 2px; /* leave a space for input border */
+        top: 50%;
+        transform: translateY(-52%);
+        z-index: 2;
+        pointer-events: none;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        cursor: pointer;
+        padding: 10px;
+        height: 80%;
+        background-color: var(--form-bg-color); /* patungan yung default select icon */
+        color: var(--form-font-color-dark); 
+    }
+}
+
+option[disabled] {
+    color: var(--form-placeholder-color);
+}
+
+/*=============== OTHERS ===============*/
+.frm__title {
+    @include x-rem(font-size, 22px);
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-md);
+
+    @include mq($from: tablet-landscape) {
+        margin-top: var(--space-lg);
+    }
+}
+
+.input--hidden {
+    position: absolute;
+    visibility: hidden;
+    left: -999px;
+}
+/*=============== ROUNDED INPUT ===============*/
+.form-group--rounded {
+    position: relative;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-rg);
+
+    .frm__label {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-family: var(--font-secondary);
+        color: #BEBEBE;
+        transition: all 0.2s ease;
+        background: var(--color-base-white);
+        width: 90%;
+        cursor: text;
+    }
+
+    .frm__input {
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--form-border-color);
+        background-color: var(--color-base-white);
+        color: var(--form-font-color-dark);
+        border-radius: 40px;
+        padding: 0.6rem 1.2rem;
+    
+        &:focus,
+        &:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0;
+            outline: 0;
+            background-color: transparent;
+            color: var(--form-font-color-dark);
+        }
+    
+       &:focus + .frm__label,
+       &:valid + .frm__label {
+            @extend %rounded-label-focus-state;
+       }
+    }
+
+   &.frm--danger {
+       .frm__label {
+           @extend %rounded-label-focus-state;
+           color: var(--color-danger) !important;
+       }
+
+       .frm__input {
+           border-color: var(--color-danger) !important;
+       }
+   }
+}
+
+/*=============== CUSTOM FILE UPLOAD ===============*/
+.file-upload--outline {
+    border: 2px dashed var(--color-neutral-0);
+    border-radius: 6px;
+    padding: var(--space-lg) var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.33s;
+
+    &:hover,
+    &:focus {
+        border-color: var(--color-primary);
+    }
+}
+
+/*=============== FORM PREPEND ===============*/
+.frm__input-group {
+    position: relative;
+
+    .input-group__prepend {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: var(--form-input-font-size);
+
+        .flag-icon {
+            height: 24px;
+            width: auto;
+            object-fit: contain;
+        }
+    }
+
+    .input-group__append {
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .frm__input--phone {
+        padding-left: 4.5rem;
+    }
+}
+
+/*=============== FORM GUIDETEXT ===============*/
+
+.frm__guidetext {
+    color: var(--color-base-black);
+    @include x-rem(font-size, 10px);
+    // font-style: italic;
+
+    &--danger {
+        color: var(--color-danger);
+    }
+
+    &--success {
+        color: var(--color-success);
+    }
+
+    &--italic {
+        font-style: italic;
+    }
+}
+
+/*=============== FORM STATES ===============*/
+
+.frm--required {
+    .frm__label::after {
+        content: '*';
+        margin-left: 1pt;
+        color: var(--color-danger) !important;
+        font: inherit;
+    }
+}
+
+.frm--success {
+    .frm__label {
+        color: var(--color-success);
+    }
+
+    .frm__input {
+        border-color: var(--color-success);
+    }
+}
+
+.frm--danger {
+    .frm__label {
+        color: var(--color-danger);
+    }
+
+    .frm__input {
+        border-color: var(--color-danger);
+    }
+}
+
+
+
+/*=============== SEARCH GROUP ===============*/
+.frm__search-group {
+    &::before {
+        content: "\e9bf";
+        font-family: 'feather' !important;
+        color: var(--form-border-color);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 12px;
+    }
+
+    .frm__input {
+        padding-left: 34px;
+    }
+}
+
+.frm__search-group--lg {
+    .frm__input {
+        padding-left: 42px;
+        @include x-rem(font-size, 18px);
+    }
+
+    &::before {
+        @include x-rem(font-size, 18px);
+    }
+}
+
+/*=============== ADVANCED SEARCH GROUP ===============*/
+
+.ct-advanced-search-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;  
+
+    @include mq($from: tablet-portrait) {
+        width: auto;
+    }
+
+    .frm__input-group {
+        flex: 1 1 auto;
+    }
+}
+
+/*=============== CUSTOM RADIO GROUP ===============*/
+
+.frm__radio-group {
+    display: flex;
+    gap: 0.9375rem;
+    flex-wrap: wrap;
+
+    .radio-group__label {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        width: 112px;
+        cursor: pointer;
+        background: var(--color-base-white);
+        box-shadow: 0px 7px 21px rgba(0, 0, 0, 0.03);
+        border-radius: 6px;
+        border: 1px solid transparent;
+        padding: var(--space-rg) var(--space-sm);
+        position: relative;
+        transition: all .2s;
+        text-align: center;
+        @include x-rem(font-size, 12px);
+    }
+    
+    .radio-group__label > img {
+        height: 30px;
+        width: auto;
+        object-fit: contain;
+    }
+    
+    input[type="radio"]:checked + label {
+        border-color: var(--color-primary);
+    }
+    
+    input[type=radio]:disabled + label {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none !important;
+    }
+}
+
+/*=============== FORM RADIO GRID/ROW USED IN SURVEY FORM ===============*/
+.frm__radio-grid {
+    overflow-x: auto;
+    padding-bottom: var(--space-sm);
+}
+.frm__radio-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-neutral-4);
+    padding: var(--space-rg) var(--space-rg);
+    margin: var(--space-sm) 0;
+    gap: 1.5rem;
+    min-width: fit-content;
+
+    @include mq($from: desktop-small) {
+        padding: var(--space-md) var(--space-rg);
+    }
+
+    .frm__radio-cell {
+        width: 40px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.frm__radio-question {
+    min-width: 220px;
+    width: 35%;
+    color: var(--font-tertiary);
+}
+
+/*=============== CHECK GROUP ===============*/
+
+
+.frm__check-group {
+   .frm__input--line {
+    padding-bottom: 0px;
+
+    @include mq($from: tablet-landscape) {
+        width: auto;
+        margin-top: -1rem;
+
+    }
+   }
+}
+
+/*=============== COMBODATE ===============*/
+.combodate {
+    select {
+        @extend .frm__input;
+    }
+}
+
+/*=============== FORM CODE ===============*/
+.frm__code {
+    display: flex;
+    gap: 1.5rem;
+
+    .frm__input {
+        @include x-rem(font-size, 40px);
+        font-family: var(--font-tertiary);
+        padding: 0;
+        text-align: center;
+    }
+}
+
+

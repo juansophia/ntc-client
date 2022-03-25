@@ -1,0 +1,38 @@
+.dropify-wrapper {
+    background: transparent;
+    border: 2px dashed var(--color-neutral-0);
+    border-radius: 6px;
+    transition: border 0.33s;
+    height: 220px;
+
+    &:hover {
+        border-color: var(--color-primary);
+    }
+}
+
+.dropify-message {
+    font-family: var(--font-tertiary);
+    color: var(--color-base-black);
+    @include x-rem(font-size, 14px);
+
+   
+
+    .file-icon {
+        color: var(--color-neutral-0) !important;
+    }
+
+    .btn {
+        display: block;
+        width: fit-content;
+        margin: var(--space-sm) auto;
+        padding: 0.9rem 1.6rem;
+    }
+
+    .dropify__guidetext {
+        display: block;
+        font-style: italic;
+        font-family: var(--font-secondary);
+        margin: var(--space-sm);
+        color: var(--color-neutral-3);
+    }
+}

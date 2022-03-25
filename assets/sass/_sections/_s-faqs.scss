@@ -1,0 +1,13 @@
+.ct-faqs__accordion {
+    .ct-accordion__heading--main {
+        img {
+            width: 26px;
+            height: 26px;
+            object-fit: contain;
+        }
+    }
+
+    > .accordion-item {
+        margin-bottom: var(--space-sm);
+    }
+}

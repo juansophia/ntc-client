@@ -1,0 +1,84 @@
+.ct-c-landing {
+    .brand-logo {
+        @include mq($from: desktop-small) {
+            height: 74px;
+        }
+    }
+
+    .ct-landing__header {
+        margin-top: 0;
+    }
+
+    .ct-cards-wrapper {
+        @include mq($from: desktop-small) {
+            gap: 2rem;
+        }
+    }
+
+    .ct-card {
+        @include mq($from: mobile-landscape) {
+            max-width: 300px;
+        }
+        @include mq($from: tablet-landscape) {
+            padding: var(--space-md) var(--space-md) var(--space-lg);
+        }
+
+        @include mq($from: desktop-regular) {
+            max-width: 360px;
+        }
+    }
+
+    .ct-card > .icon{
+        height: 90px;
+        object-fit: contain;
+    }
+
+    .ct-card > .p{
+        @include x-rem(font-size, 14px)
+    }
+}
+.ct-c-landing__main {
+    position: static;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  
+    min-height: 100vh;
+    padding: var(--space-lg) var(--space-rg) var(--space-rg);
+
+    @include mq($from: desktop-small) {
+        width: calc(100% - 40vw);
+        padding-top: var(--space-sm);
+
+    }
+
+    @include mq($from: desktop-regular) {
+        width: calc(100% - 42vw);
+    }
+}
+
+.ct-c-landing__display {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+    visibility: hidden;
+
+    img {
+        height: 100%;
+    }
+
+    @include mq($from: desktop-small) {
+        visibility: visible;
+        height: 95vh;
+        width: auto;
+    }
+   
+
+    // @include mq($from: desktop-regular) {
+    //       min-width: 42vw;
+    // }
+}

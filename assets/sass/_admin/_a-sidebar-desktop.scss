@@ -1,0 +1,286 @@
+:root {
+    --a-nav-link-color: var(--color-neutral-9);
+    --a-nav-link-color-hover: var(--color-primary);
+    --a-nav-link-bg-hover: var(--color-neutral-4);
+
+    --a-nav-sidebar-width: 320px;
+    --a-nav-link-width: 283px;
+
+    // submenu items
+    --a-submenu-link-color: var(--color-neutral-9);
+    --a-submenu-link-color-hover: var(--color-secondary);
+}
+
+.a-sidebar-menu {
+    border-radius: 18px;
+    // display: flex;
+    flex-direction: column;
+    padding: var( --space-md) var(--space-md);
+    padding-right: 5px;
+    width: 90px;
+    height: 97%;
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: 99;
+    overflow-x: hidden;
+    background: rgba($color: #FFFFFF, $alpha: 0.6);
+    transition: all 0.2s;
+    box-shadow: -10px 0px 88px rgba(0, 0, 0, 0.12);
+
+    // wont overlap with logout
+    padding-bottom: 80px;
+
+    // hidden for mobile
+    display: none;
+
+    @include mq($from: desktop-small) {
+        display: flex;
+    }
+}
+
+/*-------------------
+
+SIDEBAR LOGO 
+
+-------------------*/
+
+.a-menu__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .a-menu__logo-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .a-menu__logo-text {
+        height: 36px;
+        width: auto;
+        // width: 201.39px;
+        // object-fit: contain;
+        // overflow: hidden;
+    }
+}
+
+/*-------------------
+
+SIDEBAR PROFILE 
+
+-------------------*/
+
+.a-menu__profile {
+    margin: var(--space-rg) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    /* need to set fixed width & height so the elements below it wont move when hidden */
+    height: 97px;
+    width: 283px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.a-profile__thumb {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    img {
+        @extend %img-cover;
+    }
+}
+
+.a-profile__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .a-profile__name {
+        font-family: var(--font-primary);
+    }
+
+    .a-profile__role {
+        font-family: var(--font-primary);
+        color: var(--color-secondary);
+        @include x-rem(font-size, 12px);
+    }
+}
+
+/*-------------------
+
+SIDEBAR NAV LINKS
+
+-------------------*/
+.a-menu__nav {
+    flex: 1 1 auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-right: var(--space-sm);
+}
+.a-nav__link {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+    padding: var(--space-rg) var(--space-sm);
+    margin-top: var(--space-xxxs);
+
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-primary);
+    color: var(--a-nav-link-color) !important;
+    transition: all 0.33s;
+
+    .a-nav__icon {
+        width: 28px;
+        svg {
+            width: 28px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        path {
+            transition: all .33s;
+        }
+    }
+
+    &:hover{
+        background-color: var(--a-nav-link-bg-hover);
+        color: var(--a-nav-link-color-hover) !important;
+        text-decoration: none;
+
+        svg path {
+            fill: var(--a-nav-link-color-hover);
+        }
+    }
+
+    &.page--active {
+        color: var(--a-nav-link-color-hover) !important;
+
+        svg path {
+            fill: var(--a-nav-link-color-hover);
+        }
+    }
+
+    /* need to set fixed width & height so it wont move when hidden */
+    width: var(--a-nav-link-width);
+    height: 58px;
+    overflow: hidden;
+
+    &--long {
+        height: 80px;
+    }
+}
+
+/*-------------------
+
+SIDEBAR FOOTER
+
+-------------------*/
+
+.a-menu__footer {
+    position: absolute;
+    bottom: 15px;
+}
+
+
+/*-------------------
+
+HIDDEN ELEMENTS BY DEFAULT
+
+-------------------*/
+.a-menu--hidden {
+    opacity: 0;
+    width: 0;
+}
+
+
+/*-------------------
+
+SHOW HIDDEN ELEMENTS / EXPAND
+
+-------------------*/
+.a-sidebar-menu.expand {
+    width: var(--a-nav-sidebar-width);
+    background: var(--color-base-white);
+
+
+    .a-menu__profile {
+        opacity: 1;
+    }
+
+    .a-menu--hidden {
+        opacity: 1;
+        width: auto;
+    }
+
+    .a-menu__nav {
+        overflow-y: auto;
+        overflow-y: overlay;
+    }
+}
+
+/*-------------------
+
+SIDEBAR SUBMENU
+
+-------------------*/
+.a-nav__link.has-submenu {
+    position: relative;
+    padding-right: 8px;
+
+    /* parent submenu arrow icon */
+    .a-submenu__arrow {
+        position: absolute;
+        right: 8px;
+    }
+
+    .a-submenu__arrow i {
+        font-weight: bold;
+        transition: all 0.2s;
+    }
+}
+
+/* when submenu is opened */
+.a-nav__link.has-submenu[aria-expanded="true"] {
+    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+    background-color: var(--a-nav-link-bg-hover);
+
+    /* parent submenu arrow icon */
+    .a-submenu__arrow i::before {
+        content: "\e930";
+    }
+}
+
+.a-submenu-wrapper {
+    background-color: var(--a-nav-link-bg-hover);
+    padding: 0 var(--space-sm) var(--space-sm) 3.125rem;
+    border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
+    opacity: 1;
+    transition: height 0.15s, opacity 0.2s ease;
+
+    &.collapse:not(.show) {
+        opacity: 0;
+        // transition: height 0.15s, opacity 0.2s ease;
+    }
+}
+
+.a-submenu__link {
+    font-family: var(--font-primary);
+    color: var(--a-submenu-link-color) !important;
+    padding: var(--space-xxs) 0;
+    display: block;
+    transition: all 0.33s;
+
+    &:hover,
+    &.page--active {
+        color: var(--a-submenu-link-color-hover) !important;
+    }
+}

@@ -1,0 +1,94 @@
+// main: ../style.scss
+
+/*-------------------
+
+Accordions
+
+-------------------*/
+
+// 1. sass vars / css vars
+
+
+// 2. Base
+.ct-accordion__heading {
+    border-bottom: 1px solid var(--color-neutral-4);
+    padding: var(--space-rg) 0;
+    position: relative;
+
+    &::before {
+        font-family: 'feather' !important;
+        position: absolute;
+        right: 0;
+        font-weight: 800;
+
+        color:var(--color-secondary);
+        content: "\e994";
+    }
+
+    &.collapsed::before {
+        color:var(--color-primary);
+        content: "\e9af";
+    }
+}
+
+.ct-accordion__heading--main {
+    background: #ECEFF2;
+    padding: var(--space-md);
+
+    &::before,
+    &.collapsed::before {
+        color:var(--color-tertiary);
+        right: var(--space-md);
+    }
+
+    &::before {
+        content: "\e930";
+    }
+
+    &.collapsed::before {
+        content: "\e92d";
+    }
+
+    h4 {
+        @include x-rem(font-size, 16px);
+        color: var(--color-tertiary);
+    }
+}
+
+.ct-accordion__heading--inner {
+    background: rgba($color: #5D5E60, $alpha: 0.1);
+    padding: var(--space-md) var(--space-lg);
+
+
+    &::before,
+    &.collapsed::before {
+        color:var(--color-tertiary);
+        right: var(--space-md);
+
+    }
+
+    h4 {
+        @include x-rem(font-size, 14px);
+        color: var(--color-tertiary);
+
+    }
+}
+
+
+.ct-accordion__body {
+    padding: var(--space-sm);
+}
+
+.ct-accordion__body--inner {
+    background: rgba($color: #B2BDCB, $alpha: 0.1);
+    @include x-rem(font-size, 14px);
+    padding: var(--space-md) var(--space-lg);
+
+}
+
+.ct-accordion__card {
+    @include mq($from: tablet-portrait) {
+        height: 600px;
+        overflow-y: auto;
+    }
+}

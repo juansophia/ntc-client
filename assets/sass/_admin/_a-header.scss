@@ -1,0 +1,66 @@
+.ct-a-header {
+    background: var(--color-base-white);
+
+    @include mq($from: desktop-small) {
+        background: transparent;
+    }
+
+    // burger icon for mobile
+    #cd-menu-trigger .cd-menu-icon  {
+        background-color: var(--color-primary);
+    }
+
+    // burger icon when mobile sidebar is opened
+    #cd-menu-trigger.is-clicked .cd-menu-icon {
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    // X icon when mobile sidebar is opened
+    #cd-menu-trigger.is-clicked .cd-menu-icon::before, 
+    #cd-menu-trigger.is-clicked .cd-menu-icon::after {
+        background-color: var(--color-primary);
+    }
+
+    .ct-user-dropdown__menu {
+        top: 6px !important;
+        // left: -80px !important;
+    }
+
+    &.header--onScroll {
+        box-shadow: none;
+    }
+
+}
+
+.ct-a-header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-rg) 0;
+
+    @include mq($from: desktop-small) {
+        justify-content: flex-end;
+    }
+}
+
+.ct-a-header__block {
+    .a-menu__logo {
+        @include mq($from: desktop-small) {
+            display: none;
+        }
+    }
+}
+
+.ct-a-header__nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ct-a-nav__item {
+    &.bg-white-on-scroll {
+        padding: var(--space-xs);
+        border-radius: 18px;
+        transition: 0.2s;
+    }
+}

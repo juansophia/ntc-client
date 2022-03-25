@@ -1,0 +1,49 @@
+// main: ../style.scss
+
+// 1. sass vars / css vars
+
+
+// 2. Base
+
+.ct-breadcrumb {
+    padding: 0.5rem 0;
+    background: transparent;
+    margin-bottom: 0;
+  
+    .breadcrumb-item {
+        font-family: var(--font-secondary);
+        color: var(--color-text-body);
+        @include x-rem(font-size, 14px);
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &.active {
+            color: var(--color-secondary);
+            font-family: var(--font-tertiary);
+        }
+
+        // @include mq($from: tablet-portrait) {
+        //     @include x-rem(font-size, 16px);
+        // }
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        font-family: "feather";
+        content: "\e92f";
+        color: var(--color-text-body);
+    }
+}
+
+
+//admin breadcrumbs
+.cd-main-content--admin {
+    .breadcrumb-item {
+        font-family: var(--font-secondary);
+
+        &.active {
+            font-family: var(--font-tertiary);
+        }
+    }
+}

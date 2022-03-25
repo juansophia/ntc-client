@@ -1,0 +1,56 @@
+.hover--up {
+    transition: transform 0.33s;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+.hover--up-sm {
+    transition: transform 0.33s;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+}
+
+.hover--down {
+    transition: transform 0.33s;
+
+    &:hover {
+        transform: translateY(10px);
+    }
+}
+
+.hover--left {
+    transition: transform 0.33s;
+    &:hover {
+        transform: translateX(-5px);
+    }
+}
+
+.hover--right {
+    transition: transform 0.33s;
+    &:hover {
+        transform: translateX(5px);
+    }
+}
+
+
+.hover--border-left {
+    transition: background 0.33s, border 0.2s;
+    border-left: solid 3px transparent;
+
+    &:hover {
+        background: var(--color-neutral-4);
+        border-left-color: var(--color-primary);
+    }
+}
+
+.hover--border-primary {
+    transition: all 0.33s;
+
+    &:hover {
+        border: solid 1px var(--color-primary);
+    }
+}

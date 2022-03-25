@@ -1,0 +1,11 @@
+.ct-frequency__map {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    height: 300px;
+    margin-bottom: var(--space-md);
+
+    @include mq($from: tablet-portrait) {
+        min-height: 100%;
+    }
+}

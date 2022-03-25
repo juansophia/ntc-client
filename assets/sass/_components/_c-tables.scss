@@ -1,0 +1,133 @@
+// main: ../style.scss
+
+/*-------------------
+
+Tables
+
+-------------------*/
+// 1. sass vars / css vars
+
+// 2. Base
+
+table {
+    margin-bottom: 0;
+}
+
+.ct-table-wrapper {
+    padding: var(--space-sm) var(--space-rg);
+}
+
+.ct-table {
+    overflow-x: auto;
+
+    th {
+        font-family: var(--font-primary);
+        color: var(--color-tertiary);
+        @include x-rem(font-size, 16px);
+        white-space: nowrap;
+        border: none !important;
+        padding: var(--space-xs) 0.75rem;
+    }
+
+    td {
+        @include x-rem(font-size, 15px);
+        padding: 0.5rem 0.75rem;
+        border-top-color: var(--color-neutral-5);
+    }
+
+    td,
+    th {
+        vertical-align: middle;
+    }
+
+    // removes the default border from bootstrap
+    tbody tr:first-child {
+        td {
+            border-top-color: transparent;
+        }
+    }
+
+    .truncate {
+        max-width: 280px;
+        display: inline-block;
+    }
+
+    .w-25 {
+        min-width: 220px;
+    }
+
+    .frm__input {
+        min-width: 100px;
+    }
+}
+
+.ct-table--hover {
+    tbody tr {
+        cursor: pointer;
+        transition: background 0.33s, border 0.2s;
+        border-left: solid 8px transparent;
+
+        &:hover {
+            background: var(--color-neutral-4);
+            border-left-color: var(--color-primary);
+        }
+    }
+}
+
+.ct-table--no-border {
+    td,
+    th {
+        border: none;
+    }
+}
+
+.ct-table__dropdown {
+    .dropdown-menu {
+        top: 10px !important;
+        left: -30px !important;
+        min-width: 8rem;
+    }
+}
+
+/*-------------------
+
+Table Settings -- Tabs / Actions / Advanced Search
+
+-------------------*/
+.ct-table-settings__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: var(--space-rg);
+}
+
+.ct-table-settings__col {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.ct-table-settings__col--right {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+/*-------------------
+
+Table -- Show entries
+
+-------------------*/
+
+.ct-table__entries {
+    label {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+    }
+
+    select.frm__input {
+        min-width: 3.5rem;
+    }
+}

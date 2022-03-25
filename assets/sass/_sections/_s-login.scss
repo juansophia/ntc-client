@@ -1,0 +1,19 @@
+.ct-login__body {
+    padding: var(--space-lg) 0 var(--space-md);
+
+    @include mq($from: desktop-small) {
+        padding: var(--space-xxl) 0 var(--space-md);
+    }
+}
+
+.ct-login__card {
+    padding: 1.5rem 1.2rem 1.5rem;
+    p,
+    .hyperlink {
+        @include x-rem(font-size, 14px);
+    }
+
+    @include mq($from: tablet-portrait) {
+        padding: 2rem;
+    }
+}

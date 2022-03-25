@@ -1,0 +1,144 @@
+.dropdown-menu {
+    background: var(--color-base-white);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 1px 13px rgba(41, 72, 152, 0.14);
+    border-radius: 10.9322px;
+    padding: var(--space-xs);
+
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: var(--space-xxs) var(--space-rg);
+        border-radius: 5px;
+
+        &:hover {
+            background: var(--color-neutral-4);
+            color: var(--color-base-black);
+        }
+    }
+}
+
+.dropdown-toggle--custom-icon {
+    &::after {
+        border: none !important;
+        font-family: 'feather' !important;
+        content: "\e92d";
+    }
+}
+
+.has-arrow-up {
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid var(--color-base-white);
+
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/*
+*
+* Dropdown utilities
+*
+*/
+
+.dropdown-menu-center {
+    right: auto !important;
+    top: auto !important;
+    left: 50% !important;
+    transform: translate(-50%, 2px) !important;
+}
+
+.dropdown-menu--lg {
+    min-width: 90vw;
+    padding: var(--space-md) var(--space-lg); 
+
+    @include mq($from: tablet-portrait) {
+        min-width: 403px;
+    }
+    @include mq($from: desktop-small) {
+        min-width: 450px;
+    }
+}
+
+/*
+*
+* User dropdown - header
+*
+*/
+
+.ct-user-dropdown {
+    display: flex;
+    align-items: center;
+
+    >:not(:last-child) {
+        margin-right: var(--space-sm);
+    }
+
+    &--white {
+        color: var(--color-base-white);
+    }
+
+    .user__avatar {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+
+        .thumb {
+            @extend %img-cover;
+        }
+    }
+
+    .user__name {
+        font-family: var(--font-tertiary);
+    }
+}
+
+.ct-user-dropdown__menu {
+    min-width: 240px;
+    .user__icon {
+        margin-right: var(--space-sm);
+        height: 16px;
+        width: 16px;
+        object-fit: contain;
+    }
+}
+
+/*
+*
+* Dropdown Group
+*
+*/
+
+.ct-dropdown-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+
+    @include mq($from: tablet-portrait) {
+        width: auto;
+    }
+
+    .dropdown {
+        min-width: 200px;
+        flex: 1 1 auto;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

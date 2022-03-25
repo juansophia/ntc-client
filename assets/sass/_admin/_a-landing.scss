@@ -1,0 +1,27 @@
+.ct-a-landing {
+    padding: var(--space-lg) var(--space-rg);
+}
+
+.a-landing__heading {
+    margin-top: var(--space-lg);
+
+    @include mq($from: tablet-portrait) {
+        margin-top: var(--space-xl);
+    }
+}
+.a-landing__body {
+    margin-top: var(--space-md);
+
+    @include mq($from: tablet-portrait) {
+        margin-top: var(--space-xxxl);
+    }
+
+    .ct-card {
+        @extend .bg--glass;
+        padding-top: var(--space-lg);
+
+        @include mq($from: tablet-portrait) {
+            max-width: 266px;
+        }
+    }
+}

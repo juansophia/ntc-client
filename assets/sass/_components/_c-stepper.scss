@@ -1,0 +1,128 @@
+
+/*-------------------
+
+STEPPER
+
+-------------------*/
+// colors
+$stepper-text: var(--color-primary);
+$stepper-bg: var(--color-neutral-0);
+$stepper-num: var(--color-base-white);
+
+$stepper-text-active: var(--color-primary);
+$stepper-bg-active: var(--color-primary);
+$stepper-num-active: var(--color-base-white);
+
+.ct-stepper {
+  display: flex;
+  padding: var(--space-rg) 0;
+  //align-items: center;
+  margin-bottom: var(--space-rg);
+  overflow: hidden;
+
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+
+.stepper-item {
+  @include x-rem(font-size, 12px);
+  color: $stepper-text;
+  font-family: var(--font-primary);
+  width: 50%;
+  float: left;
+  position: relative;
+  text-align: center;
+
+  @include mq($from: tablet-portrait) {
+    width: 40%;
+    @include x-rem(font-size, 16px);
+  }
+
+  @include mq($from: desktop-small) {
+    @include x-rem(font-size, 16px);
+  }
+
+  /* circle - number*/
+  &:before {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-primary);
+    content: counter(step);
+    counter-increment: step;
+    
+    //padding: var(--space-sm);
+    line-height: 20px;
+    font-size: 16px;
+    color: $stepper-num;
+    background: $stepper-bg;
+    margin: 0 auto var(--space-rg) auto;
+
+    @include mq($from: desktop-small) {
+      width: 60px;
+      height: 60px;
+      @include x-rem(font-size, 20px);
+    }
+  }
+
+  /*progressbar connectors*/
+  &:after {
+    content: '';
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    background: $stepper-bg;
+    position: absolute;
+    left: -50%;
+    top: 18px;
+    z-index: -1;
+    opacity: 0.5;
+
+    @include mq($from: desktop-small) {
+      top: 26px;
+      height: 2px;
+    }
+  }
+
+  &:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+  }
+}
+
+/*-------------------
+
+STEPPER : Active state
+
+-------------------*/
+
+.stepper-item.active {
+  color: $stepper-text-active;
+
+  &:before{
+    transform: translateY(-4px);
+    background-color: $stepper-bg-active;
+    color: $stepper-num-active;
+  }
+}
+
+/*-------------------
+
+STEPPER :Done
+
+-------------------*/
+
+.stepper-item.done {
+  color: $stepper-text-active;
+  &:before {
+    font-family: 'feather' !important;
+    content: "\e92a";
+    font-weight: bolder;
+    background: var(--color-success);
+  }
+}

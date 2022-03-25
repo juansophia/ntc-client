@@ -1,0 +1,24 @@
+.ct-application-cards {
+    .ct-cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(208px, 1fr));
+    }
+    .ct-card {
+        position: relative;
+        min-height: 182px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        cursor: pointer;
+        border: 1px solid transparent;
+        overflow: hidden;
+    }
+
+    .ct-badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0;
+        border-bottom-left-radius: inherit;
+    }
+}

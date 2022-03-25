@@ -1,0 +1,127 @@
+// main: ../style.scss
+
+/*-------------------
+
+Cards
+
+-------------------*/
+
+// 1. sass vars / css vars
+:root {
+    --card-shadow-1:    0px 17px 40px -1px rgb(0 37 167 / 10%);
+}
+
+
+
+// 2. Base
+.ct-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+
+    @include mq($from: tablet-portrait) {
+        gap: 2.2rem;
+    }
+    @include mq($from: desktop-small) {
+        gap: 3rem;
+    }
+}
+
+.ct-card {
+    background-color: var(--color-base-white);
+    box-shadow: var(--card-shadow-1);
+    border-radius: var(--border-radius-rg);
+    padding: var(--space-md) var(--space-md);
+
+    @include mq($from: tablet-landscape) {
+        padding: var(--space-lg) var(--space-md);
+    }
+
+    .icon {
+        height: 98px;
+        width: auto;
+        object-fit: contain;
+        margin-bottom: var(--space-sm);
+    }
+
+    &--rg {
+        width: 308px;
+        max-width: 308px;
+
+        p {
+            @include x-rem(font-size, 14px);
+        }
+      
+    }
+
+    &--md {
+        width: 100%;
+        max-width: 400px;
+    }
+
+
+    &--lg {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    &--reg {
+        margin-top: var(--space-md);
+        @include mq($from: desktop-small) {
+            margin-top: var(--space-lg);
+            padding: var(--space-lg) var(--space-xl);
+        }
+    }
+}
+
+.ct-card--colored {
+    padding-left: 2.5rem;
+    position: relative;
+
+    > * {
+        position: static;
+        z-index: 2;
+    }
+
+    &::before {
+        content: "";
+        width: 84px;
+        height: 84px;
+        // background-color: #FFF7D6;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+        left: -25%;
+    }
+}
+
+@for $i from 1 through length($cardAccentColors) {
+    .ct-card--colored:nth-child(#{length($cardAccentColors)}n+#{$i})::before {
+        background-color: nth($cardAccentColors, $i)
+    }
+}
+
+.ct-card--centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ct-card--withOverlay {
+    border-color: transparent !important;
+}
+
+.ct-cards-grid {
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+ 
+
+    // @include mq($from: desktop-small) {
+    //     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    // }
+}
+

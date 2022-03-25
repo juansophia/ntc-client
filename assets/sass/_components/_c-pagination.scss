@@ -1,0 +1,54 @@
+// main: ../style.scss
+
+/*-------------------
+
+Paginations
+
+-------------------*/
+
+// 1. sass vars / css vars
+$pagination-bg: transparent;
+$pagination-border: rgba(181, 181, 181, 0.5);
+$pagination-text-color: var(--color-neutral-0);
+$pagination-active-bg: var(--color-primary);
+$pagination-active-border: var(--color-primary);
+
+// 2. Base
+.ct-pagination {
+    border-radius: 8px;
+    background: linear-gradient(91.47deg, rgba(255, 255, 255, 0.67) 1.2%, rgba(255, 255, 255, 0.18) 89.61%);
+    .page-link {
+        border: solid 1px $pagination-border;
+        background-color: $pagination-bg;
+        color: $pagination-text-color;
+        padding: var(--space-sm) var(--space-rg);
+        @include x-rem(font-size, 14px);
+        font-family: var(--font-tertiary);
+
+        &:hover {
+            background-color: var(--color-neutral-4);
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .page-item {
+        &.active .page-link {
+            background-color: $pagination-active-bg;
+            border-color: $pagination-active-border;
+        }
+
+        &.disabled .page-link {
+            border: solid 1px $pagination-border;
+            background-color: $pagination-bg;
+            color: $pagination-text-color;
+        }
+    }
+}
+
+.ct-pagination__info {
+    @include x-rem(font-size, 14px);
+    color: var(--color-tertiary);
+}

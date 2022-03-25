@@ -1,0 +1,464 @@
+// main: ../style.scss
+
+//**
+// Project Settings
+//**
+
+// see font.google.com and paste the css code here
+
+@font-face {
+    font-family: 'Khula-Extrabold';
+    src: url('../fonts/Khula-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Khula-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open-Sans-Regular';
+    src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('../fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open-Sans-Bold';
+    src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('../fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    // Font Primary 
+    --font-primary: 'Khula-Extrabold',
+    Arial,
+    sans-serif;
+
+    // Font Secondary 
+    --font-secondary: 'Open-Sans-Regular',
+    Arial,
+    sans-serif;
+
+      // Font Tertiary
+      --font-tertiary: 'Open-Sans-Bold',
+      Arial,
+      sans-serif;
+
+    /* set base values */
+    --text-base-size: 1rem;
+    --text-unit: var(--text-base-size);
+    --text-scale-ratio: 1.2;
+
+    --color-text-heading: var(--color-tertiary);
+    --color-text-body: #000;
+
+    /* line-height */
+    --heading-line-height: 1.2;
+    --body-line-height: 1.5;
+
+
+
+    @include mq($from: desktop-small) {
+        --text-scale-ratio: 1.25;
+        --text-base-size: 16px;
+    }
+
+    @include mq($from: desktop-medium) {
+        --text-scale-ratio: 1.25;
+        --text-base-size: 16px;
+        --body-line-height: 1.8;
+    }
+
+    /* type scale */
+    --text-xs: calc((var(--text-unit) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+    --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+    --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+    --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+    --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+    --text-xxxxl: calc(var(--text-xxxl) * var(--text-scale-ratio));
+}
+
+body {
+    font-size: var(--text-base-size);
+    font-family: var(--font-secondary);
+    color: var(--color-text-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 form legend {
+    color: var(--color-text-heading);
+    font-family: var(--font-primary);
+    margin-bottom: var(--space-xxs);
+    line-height: var(--heading-line-height);
+    //    letter-spacing: -1px;
+}
+
+/* text size */
+.text--xxxl {
+    font-size: var(--text-xxxl);
+}
+
+h1,
+.text--xxl {
+    font-size: var(--text-xxl);
+
+    // @include mq($from: tablet-portrait) {
+    //     font-size: var(--text-lg);
+    // }
+
+    // @include mq($from: desktop-small) {
+    //     font-size: var(--text-xl);
+    // }
+
+    @include mq($from: desktop-large) {
+        font-size: var(--text-xxl);
+    }
+}
+
+h2,
+.text--xl {
+    font-size: var(--text-xl);
+
+    @include mq($from: tablet-portrait) {
+        font-size: var(--text-xl);
+    }
+}
+
+h3,
+.text--lg {
+    font-size: var(--text-lg);
+
+    @include mq($from: tablet-portrait) {
+        font-size: var(--text-lg);
+
+    }
+}
+
+h4,
+.text--md {
+    font-size: var(--text-md);
+
+    @include mq($from: tablet-portrait) {
+        font-size: var(--text-md);
+    }
+}
+
+h5,
+.text--rg {
+    font-size: var(--text-rg);
+
+    @include mq($from: tablet-portrait) {
+        font-size: var(--text-rg);
+    }
+}
+
+h6,
+.text--sm {
+    font-size: var(--text-xs);
+
+    @include mq($from: tablet-portrait) {
+        font-size: var(--text-sm);
+    }
+}
+
+.text--sm,
+small {
+    font-size: var(--text-sm) !important;
+}
+
+.text--xs {
+    font-size: var(--text-xs);
+}
+
+p {
+    line-height: var(--body-line-height);
+}
+
+a {
+    color: var(--color-link);
+
+    &:visited {
+        color: inherit;
+    }
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+.text-container {
+
+    h2,
+    h3,
+    h4 {
+        margin-top: var(--space-sm);
+    }
+
+    ul,
+    ol,
+    p {
+        margin-bottom: var(--space-md);
+    }
+
+    ul,
+    ol {
+        list-style-position: outside;
+        padding-left: 24px;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul li,
+    ol li {
+        line-height: var(--body-line-height);
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    u {
+        text-decoration: underline;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0;
+}
+
+/* utility classes */
+.truncate {
+    // truncate text if it exceeds parent
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.font--primary {
+    font-family: var(--font-primary);
+}
+
+.font--secondary {
+    font-family: var(--font-secondary);
+}
+.font--tertiary {
+    font-family: var(--font-tertiary);
+}
+
+.text--nowrap {
+    white-space: nowrap;
+}
+
+.text--wrap {
+    white-space: normal;
+}
+
+/* colors */
+.color--primary {
+    color: var(--color-primary) !important;
+}
+.color--secondary {
+    color: var(--color-secondary) !important;
+}
+.color--tertiary {
+    color: var(--color-tertiary) !important;
+}
+
+.color--danger {
+    color: var(--color-danger) !important;
+}
+
+.color--success {
+    color: var(--color-success) !important;
+
+    svg path {
+        fill: var(--color-success);
+    }
+}
+.color--info {
+    color: var(--color-info) !important;
+}
+.color--warning {
+    color: var(--color-warning) !important;
+}
+.color--dark {
+    color: var(--color-base-black) !important;
+}
+
+.color--neutral-0 {
+    color: var(--color-neutral-0) !important;
+}
+.color--neutral-1 {
+    color: var(--color-neutral-1) !important;
+}
+.color--neutral-2 {
+    color: var(--color-neutral-2) !important;
+}
+
+/* hyperlink */
+.hyperlink {
+    font-family: var(--font-tertiary);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &--primary,
+    &--primary:visited {
+        color: var(--color-primary);
+
+        &:hover {
+            color: var(--color-primary-hover);
+        }
+    }
+
+    &--secondary,
+    &--secondary:visited {
+        color: var(--color-secondary);
+
+
+        &:hover {
+            color: var(--color-secondary-hover);
+        }
+    }
+
+    &--tertiary,
+    &--tertiary:visited{
+        color: var(--color-tertiary);
+
+
+        &:hover {
+            color: var(--color-tertiary-hover);
+        }
+    }
+
+    &--info,
+    &--info:visited{
+        color: var(--color-info);
+
+
+        &:hover {
+            color: var(--color-info-hover);
+        }
+    }
+
+    &--danger,
+    &--danger:visited{
+        color: var(--color-danger);
+
+
+        &:hover {
+            color: var(--color-danger-hover);
+        }
+    }
+}
+
+/*-------------------
+
+OTHERS : Text indent
+
+-------------------*/
+.indent--sm {
+    text-indent: 1rem;
+}
+
+.indent--rg {
+    text-indent: 2rem;
+}
+
+.indent--md {
+    text-indent: 3rem;
+}
+
+.indent--lg {
+    text-indent: 4rem;
+}
+
+//@include mq($from: desktop-small) {
+//    :root {
+//        --text-base-size: 1.25em;
+//        --text-scale-ratio: 1.25;
+//    }
+//}
+
+// Modular Scale Applied for better typograhpy visit http://www.modularscale.com/
+
+//$ms-base:                                       1rem;
+//$ms-ratio:                                      1.333, 1.125;
+
+// mappy-breakpoints (for responsive queries)
+// typi (for responsive typography)
+$typi-breakpoint: mappy-breakpoints;
+$breakpoints: (mobile-small: 320px,
+    mobile-large: 480px,
+    tabletP: 768px,
+    tabletL: 1024px,
+    screen-small: 1280px,
+    screen-regular: 1366px,
+    screen-large: 1440px,
+    screen-x-large: 1600px,
+    screen-xx-large: 1920px);
+
+
+//
+//$typi: (
+//    null:                 (16px, 1.3),
+//    screen-regular:       (16px, 1.6),
+//    screen-large:         (16px, 1.4)
+//);
+//
+//$h1-map: (
+//    null:                 (ms(3), 1.2),
+//    tabletP:              (ms(9)),
+//    screen-regular:       (ms(12), 1.2),
+//    screen-large:         (ms(13), 1.3)
+//);
+//
+//$h2-map: (
+//    null:                 (ms(2)),
+//    screen-small:         (ms(10)),
+//    screen-regular:       (ms(9))
+//);
+//
+//$h3-map: (
+//    null:                 (ms(2)),
+//    screen-small:         (ms(6)),
+//    screen-regular:       (ms(4))
+//);
+//
+//$h4-map: (
+//    null:                 (ms(2)),
+//    screen-small:         (ms(1))
+//);
+//
+//$h5-map: (
+//    null:                 (ms(0)),
+//    tabletP:              (ms(2))
+//);
+//
+//$h6-map: (
+//    null:                 (ms(0)),
+//    tabletP:              (ms(2))
+//);

@@ -1,0 +1,121 @@
+.ct-drawer-overlay {
+    content: "";
+    // display none by default
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 112;
+}
+
+.drawer {
+    .ct-attachments__body {
+        flex: unset;
+        overflow-y: unset;
+    }
+}
+
+// .ct-drawer {
+//     width: 100%;
+//     min-height: 667px;
+//     position: absolute;
+//     right: 0px;
+//     top: 0px;
+//     z-index: 150;
+//     background: var(--color-base-white);
+//     box-shadow: -10px 0px 88px rgba(0, 0, 0, 0.12);
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     overflow-x: hidden;
+//     overflow-y: auto;
+
+//     // default hidden
+//     visibility: hidden;
+//      /* Force Hardware Acceleration in WebKit */
+//      -webkit-transform: translateZ(0);
+//      -webkit-backface-visibility: hidden;
+//      -webkit-transition: transform .4s, height .4s, width .4s, visibility 0s;
+//      -moz-transition: transform .4s, height .4s, width .4s, visibility 0s;
+//     /* this creates the subtle slide in animation of the navigation */
+//     -webkit-transform: translateX(517px);
+//     -moz-transform: translateX(517px);
+//     -ms-transform: translateX(517px);
+//     -o-transform: translateX(517px);
+//     transform: translateX(517px);
+//     height: 0;
+
+//     @include mq($from: tablet-portrait) {
+//         max-width: 517px;
+//         // min-height: 850px;
+//         height: 100vh;
+//     }
+
+
+//     .ct-attachments__body {
+//         flex: unset;
+//     }
+
+//     > * {
+//         margin-left: var(--space-rg);
+//         margin-right: var(--space-rg);
+//     }
+// }
+
+
+.ct-drawer--no-attachment {
+    justify-content: flex-start;
+
+    .ct-drawer__cta {
+        position: sticky;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        
+        @include mq($from: tablet-portrait) {
+            position: absolute;
+        }
+    }
+}
+
+
+// .ct-drawer--open {
+//     // transition-duration: all .2s, height 5s, width 5s, visibility 0s;
+//     -webkit-backface-visibility: hidden;
+//     -webkit-transition: all .4s;
+//     -moz-transition: all .4s;
+//     transform: translateX(0);
+//     height: auto;
+//     visibility: visible;
+
+//     @include mq($from: tablet-portrait) {
+//         height: 100vh;
+//     }
+// }
+
+.ct-drawer__close-btn {
+    @include x-rem(font-size, 20px);
+}
+
+.ct-drawer__cta {
+    // background: var(--color-primary);
+    color: var(--color-base-white);
+    padding: var(--space-rg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+        text-decoration: none;
+    }
+
+    > * {
+        color: var(--color-base-white);
+
+    }
+}

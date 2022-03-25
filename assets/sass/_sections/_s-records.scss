@@ -1,0 +1,50 @@
+.ct-records__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ct-records__num {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-neutral-4);
+    border-radius: var(--border-radius-sm);
+    padding: var(--space-md);
+    flex: 1 1 auto;
+    
+}
+
+.ct-records__QR {
+    width: 100px;
+    height: 100px;
+}
+
+.ct-records__label {
+    margin-bottom: var(--space-xs);
+    display: block;
+    @include x-rem(font-size, 14px);
+
+
+    @include mq($from: desktop-small) {
+        margin-bottom: 0;
+    }
+}
+
+.ct-records__data {
+    font-family: var(--font-tertiary);
+    @include x-rem(font-size, 14px);
+}
+
+/*-------------------
+
+RECORDS SUMMARY MODAL
+
+-------------------*/
+.ct-modal {
+    .ct-records__label {
+        @include mq($from: tablet-portrait) {
+            margin-bottom: 0;
+        }
+    }
+}

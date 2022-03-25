@@ -1,0 +1,94 @@
+// main: ../style.scss
+
+/*-------------------
+
+Header
+
+-------------------*/
+// 1.Config
+
+
+// 2.Layouts
+.ct-header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    background: transparent;
+}
+
+.ct-header.lateral-menu-is-open {
+    -webkit-transform: translateX(-300px);
+    -moz-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    -o-transform: translateX(-300px);
+    transform: translateX(-300px);
+}
+
+// .header--fixed {
+//   position: fixed;
+// }
+
+.header--onScroll {
+    // padding: var(--space-sm) 0;
+    // background-color: var(--color-base-white);
+    @extend %card-shadow;
+
+    // .ct-c-header__primary {
+    //   padding: var(--space-xxxs) 0;
+    // }
+
+    .ct-c-header__secondary {
+      background: var(--color-base-white);
+      box-shadow: unset;
+    }
+
+    .ct-c-header__brand {
+      height: 35px !important;
+    }
+
+    .bg-white-on-scroll {
+      background: white;
+    }
+}
+
+.nav--desktop-only {
+  display: none;
+
+  @include mq($from: desktop-small) {
+    display: block;
+  }
+}
+
+/*-------------------
+
+Search Bar on header
+
+-------------------*/
+.navbar-search-overlap {
+  position: absolute !important;
+  top: 0px;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  background-color: var(--color-base-white);
+  padding: var(--space-rg) var(--space-md) 0;
+
+  .frm__search-group {
+    display: flex;
+    position: relative;
+  }
+
+  .frm__input {
+    border-color: transparent;
+  }
+}

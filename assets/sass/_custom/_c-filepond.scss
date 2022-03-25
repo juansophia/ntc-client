@@ -1,0 +1,26 @@
+.filepond--drop-label {
+    background: rgba(223, 234, 245,1) !important;
+    border: 1px dashed #707070;
+    border-radius: 6px;
+    // height: fit-content;
+    padding: var(--space-md) var(--space-rg);
+
+    label {
+        font-family: var(--font-tertiary);
+        color: var(--color-base-black);
+        @include x-rem(font-size, 14px);
+    }
+
+}
+
+.filepond--label-action {
+    display: block;
+    text-decoration: none;
+    background: var(--color-base-white);
+    border: 1px solid #B2BDCB;
+    width: fit-content;
+    margin: var(--space-sm) auto;
+    padding: 0.6rem 1.6rem 0.7rem;
+    border-radius: 4px;
+}
+

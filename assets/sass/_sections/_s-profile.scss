@@ -1,0 +1,125 @@
+.ct-profile__sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--space-md);
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: var(--space-rg);
+}
+
+.ct-profile__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile__title {
+    color: var(--color-primary);
+    font-family: var(--font-tertiary);
+    @include x-rem(font-size, 28px);
+}
+
+.profile__pic-wrapper {
+    position: relative;
+}
+
+.profile__pic {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 10px var(--color-neutral-4);
+    margin-bottom: var(--space-rg);
+
+
+    &--lg {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.profile__change-pic {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 18px;
+    right: 5px;
+    cursor: pointer;
+    @include x-rem(font-size, 12px);
+
+    background: var(--color-primary);
+    color: var(--color-base-white);
+}
+
+.profile__name {
+    color: var(--color-primary);
+    font-family: var(--font-tertiary);
+
+    @include mq($from: tablet-portrait) {
+        @include x-rem(font-size, 18px);
+    }
+}
+
+.profile__email {
+    @include x-rem(font-size, 12px);
+
+    @include mq($from: tablet-portrait) {
+        @include x-rem(font-size, 16px);
+    }
+}
+
+.ct-profile__nav {
+    width: 100%;
+    margin-top: var(--space-md);
+}
+
+.profile__link {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: var(--space-sm) var(--space-rg);
+    font-family: var(--font-tertiary);
+    border-left: solid 6px transparent;
+
+    &.active {
+        background: var(--color-neutral-4);
+        border-left-color: var(--color-primary);
+        color: var(--color-primary);
+    }
+}
+
+// 
+.ct-profile__main {
+    padding: var(--space-md);
+    border: solid 1px var(--color-base-white);
+
+    @include mq($from: tablet-portrait) {
+        padding: var(--space-lg);
+    }
+}
+
+.ct-profile__content {
+    .db-tab__item {
+        font-family: var(--font-tertiary);
+    }
+}
+
+.profile__data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: var(--space-lg);
+}
+
+.profile__label {
+    font-family: var(--font-tertiary);
+    color: var(--color-primary);
+}
+
+.profile__input {
+    font-family: var(--font-tertiary);
+}

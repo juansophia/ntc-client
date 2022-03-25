@@ -1,0 +1,32 @@
+progress {
+    accent-color: var(--color-success);
+    border-radius: 50px;
+    overflow: hidden;
+    height: 10px;
+    transition: all 0.33s;
+}
+progress::-webkit-progress-bar {
+    background-color: #E8E8E8;
+    border-radius: 50px;
+    transition: all 0.33s;
+
+}
+progress::-webkit-progress-value {
+    background-color: var(--color-success);
+}
+progress::-moz-progress-bar {
+    background-color: var(--color-success);
+}
+
+
+//  survey progress
+.ct-progress__bg {
+    height: 6px;
+    width: 100%;
+    position: relative;
+}
+
+.ct-progress__bar {
+    height: 100%;
+    // background-color: inherit;
+}

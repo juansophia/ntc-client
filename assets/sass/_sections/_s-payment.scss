@@ -1,0 +1,42 @@
+.ct-payment {
+    padding: var(--space-md);
+
+    @include mq($from: tablet-landscape) {
+        padding: var(--space-md) var(--space-xl);
+    }
+
+    .ct-table th {
+        color: var(--color-base-black);
+    }
+}
+
+.ct-payment__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+.total__label {
+    @include x-rem(font-size, 16px);
+    font-family: var(--font-tertiary);
+
+    @include mq($from: tablet-landscape) {
+        @include x-rem(font-size, 18px);
+    }
+
+}
+
+.total__price {
+    @include x-rem(font-size, 18px);
+    font-family: var(--font-tertiary);
+    color: var(--color-primary);
+}
+
+.ct-payment__method {
+    img {
+        height: 21px;
+        object-fit: contain;
+    }
+}

@@ -1,0 +1,426 @@
+// main: ../style.scss
+
+/*-------------------
+
+Presets
+
+-------------------*/
+// 1.Config
+:root {
+    --border-radius-rg: 14px;
+    --border-radius-sm: 10px;
+    --border-radius-xs: 5px;
+}
+
+// 2.Base
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: overlay;
+    background-color: var(--body-color-bg);
+    font-size: inherit;
+    width: 100%;
+}
+
+html,
+body {
+    /* you need to set this to assign to the main element a min height of 100% */
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+button {
+	background: none;
+    border: none;
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+button, 
+[type="button"], 
+[type="reset"], 
+[type="submit"], a {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+.cd-main-content {
+    /* set a min-height and a z-index to be sure that the main element completely covers the lateral menu */
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    /* Force Hardware Acceleration in WebKit */
+    //    -webkit-transform: translateZ(0);
+    // -webkit-backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    background-color: var(--color-base-white);
+
+    &--client {
+        padding-top: 80px; // height of the client header
+
+        @include mq($from: tablet-portrait) {
+            padding-top: 92px; // height of the client header
+        }
+    }
+
+    &--admin {
+        padding-top: 82px; // height of the admin header
+        padding-left: var(--space-sm);
+        padding-right: var(--space-sm);
+
+        @include mq($from:desktop-small) {
+            padding-top: 95px; // height of the admin header
+            padding-left: 120px; // width of the admin sidebar menu
+            padding-right: var(--space-md)
+        }
+    }
+}
+
+.cd-main-content.lateral-menu-is-open {
+    /* translate to show the lateral menu - all content needs to be put in the .cd-main-content to translate*/
+    -webkit-transform: translateX(-300px);
+    -moz-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    -o-transform: translateX(-300px);
+    transform: translateX(-300px);
+}
+
+.sidebar-drawer-is-open {
+    .cd-main-content {
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    // .cd-main-content::after,
+    // .ct-header::after {
+    //     content: "";
+    //     display: block;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     background-color: transparent;
+    //     opacity: 0;
+    //     cursor: pointer;
+    //     z-index: 112;
+    // }
+}
+
+
+footer {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    /* Force Hardware Acceleration in WebKit */
+    //    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+}
+
+footer.lateral-menu-is-open {
+    -webkit-transform: translateX(-300px);
+    -moz-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
+    -o-transform: translateX(-300px);
+    transform: translateX(-300px);
+}
+
+
+/*-------------------
+
+CONTAINER
+
+-------------------*/
+
+
+.container {
+    @include mq($from: tablet-portrait) {
+        max-width: 100%;
+    }
+
+    @include mq($from: desktop-small) {
+        max-width: 1200px;
+    }
+
+    @include mq($from: desktop-regular) {
+        max-width: 1366px;
+    }
+}
+
+.column-reverse--mobile {
+    flex-direction: column-reverse;
+
+    @include mq($from: tablet-portrait) {
+        flex-direction: initial;
+    }
+}
+
+/*-------------------
+
+DISPLAYS
+
+-------------------*/
+
+.hidden {
+    display: none !important;
+}
+
+
+
+.d-flex--desktop-only {
+    display: none;
+
+    @include mq($from: desktop-small) {
+      display: flex;
+    }
+}
+
+
+.ct-divider {
+    height: 1px;
+    background-color: rgba(0,0,0,0.2);
+    display: block;
+}
+
+/*-------------------
+
+GLOBAL PAGE
+
+-------------------*/
+.ct-page {
+    padding: var(--space-md) 0 var(--space-md);
+}
+
+.ct-page__title {
+    // font-family: var(--font-tertiary);
+    @include x-rem(font-size, 26px);
+    margin-bottom: 0;
+
+    @include mq($from: desktop-small) {
+        @include x-rem(font-size, 35px);
+    }
+}
+
+.cd-main-content--admin {
+    .ct-page__title {
+        font-family: var(--font-primary);
+        // @include x-rem(font-size, 26px);
+        margin-bottom: 0;
+    }
+}
+
+/*-------------------
+
+BACKGROUND
+
+-------------------*/
+
+.bg--lightblue {
+    background-image: url('../img/bg/main-bg.png');
+    @extend %bg-image;
+}
+
+.bg--landing {
+    background-image: url('../img/bg/landing-bg.jpg');
+    @extend %bg-image;
+    background-position: left bottom;
+}
+
+.bg--building {
+    background-image: url('../img/bg/building-bg.jpg');
+    @extend %bg-image;
+    background-position: left bottom;
+}
+
+.bg--glass {
+    background: linear-gradient(91.47deg, rgba(255, 255, 255, 0.67) 1.2%, rgba(255, 255, 255, 0.18) 89.61%) !important;
+    // box-shadow: 0px 17px 40px -1px rgba(0, 37, 167, 0.05);
+    box-shadow: 0px 17px 40px -1px rgba(0, 37, 167, 0.04);
+    backdrop-filter: blur(50px);
+    border-radius: var(--border-radius-rg);
+    position: relative;
+    border: solid 1px var(--color-base-white);
+}
+
+.bg--noise {
+    content: "";
+    background-image: url(../img/bg/noise-effect.png);
+    mix-blend-mode: overlay;
+    opacity: 0.04;
+    border-radius: inherit;
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.bg--primary {
+    background-color: var(--color-primary);
+}
+
+.bg--secondary {
+    background-color: var(--color-secondary);
+}
+
+.bg--tertiary {
+    background-color: var(--color-tertiary);
+}
+
+.bg--danger {
+    background-color: var(--color-danger);
+}
+
+.bg--success {
+    background-color: var(--color-success);
+}
+
+.bg--info {
+    background-color: var(--color-info);
+}
+
+.bg--warning {
+    background-color: var(--color-warning);
+}
+
+.bg--neutral {
+    background-color: var(--color-neutral-4);
+}
+
+.bg--gray {
+    background-color: var(--color-neutral-0);
+}
+
+
+/*-------------------
+
+BORDER-RADIUS
+
+-------------------*/
+.br--xs {
+    border-radius: var(--border-radius-xs);
+}
+.br--sm {
+    border-radius: var(--border-radius-sm);
+}
+.br--rg {
+    border-radius: var(--border-radius-rg);
+}
+
+/*-------------------
+
+UL - LISTS
+
+-------------------*/
+.list {
+    display: block;
+    padding-left: 40px;
+
+    &--bullet {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+
+    &--number {
+        list-style-type:decimal;
+    }
+
+    &--lower-alpha {
+        list-style-type:lower-alpha;
+        list-style-position: inside;
+    }
+
+    &--upper-alpha {
+        list-style-type:upper-alpha;
+    }
+
+    li {
+        display: list-item;
+        line-height: 1.8;
+    }
+}
+
+
+/*-------------------
+
+SCROLLBAR
+
+-------------------*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track,
+  scrollbar-track {
+    box-shadow: none; 
+    border-radius: 10px;
+    width:8px;
+    background-color: transparent;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb,
+  scrollbar-thumb {
+    background: #d1d8e0; 
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover,
+  scrollbar-thumb:hover {
+    background: #b2bdcb; 
+  }

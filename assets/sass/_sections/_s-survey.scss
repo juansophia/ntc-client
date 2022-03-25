@@ -1,0 +1,44 @@
+.ct-survey__header {
+    background-color: var(--color-base-white);
+    box-shadow: 0px 17px 45px rgba(0, 0, 0, 0.05);
+    padding: var(--space-rg) 0;
+    @include mq($from: tablet-landscape) {
+        padding: 0;
+    }
+}
+
+.ct-survey__illus {
+    flex-shrink: 0;
+    height: 180px;
+    margin-bottom: var(--space-md);
+
+    @include mq($from: tablet-landscape) {
+        height: 230px;
+        margin-bottom: 0;
+    }
+
+    @include mq($from: desktop-regular) {
+        height: 270px;
+        margin-bottom: 0;
+    }
+}
+
+.ct-survey__body {
+    padding: var(--space-lg) 0 var(--space-md);
+
+    .form-check {
+        gap: 1rem;
+    }
+
+}
+.ct-survey__item {
+    margin-bottom: var(--space-lg);
+    
+    label {
+        color: var(--color-tertiary);
+    }
+}
+.ct-survey__info-text {
+    @include x-rem(font-size, 14px);
+    color: var(--color-tertiary);
+}

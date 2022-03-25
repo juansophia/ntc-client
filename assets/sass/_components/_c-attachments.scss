@@ -1,0 +1,108 @@
+.ct-attachments {
+    max-height: 350px;
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-top: var(--space-md);
+
+    @include mq($from:tablet-portrait) {
+        max-height: 420px;
+    }
+}
+
+.ct-attachments__header {
+    background: var(--color-neutral-7);
+    padding: var(--space-sm) var(--space-rg);
+
+    h3 {
+        @include x-rem(font-size, 20px);
+        margin-bottom: 0;
+    }
+}
+
+.ct-attachments__body {
+    flex: 1 1 auto;
+    padding: var(--space-xs);
+    padding: 0 var(--space-rg);
+    overflow-y: auto;
+}
+
+.ct-attachments__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) 0;
+
+    &:not(:last-child) {
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .filename {
+        font-family: var(--font-tertiary);
+        @include x-rem(font-size, 14px);
+    }
+
+    .fileinfo {
+        @include x-rem(font-size, 10px);
+        color: var(--color-neutral-3);
+    }
+
+    .filename,
+    .fileinfo {
+        max-width: 12rem;
+    }
+
+    .icon {
+        width: 36px;
+        height: 36px;
+        margin-right: var(--space-sm);
+        object-fit: contain;
+    }
+
+    @include mq($from: tablet-portrait, $until: tablet-landscape) {
+        .filename,
+        .fileinfo {
+            max-width: 8rem;
+        }
+    }
+
+    @include mq($from: desktop-small) {
+        .filename,
+        .fileinfo {
+            max-width: 14rem;
+        }
+    }
+}
+
+.ct-attachments__actions {
+    display: flex;
+
+    .btn {
+        padding: 0.3rem;
+        font-size: 18px;
+        transition: all 0.2s;
+
+        &:active {
+            transform: scale(0.8);
+        }
+    }
+}
+
+.ct-attachments__cta {
+    background: var(--color-primary);
+    color: var(--color-base-white);
+    padding: var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        text-decoration: none;
+    }
+
+    > * {
+        color: var(--color-base-white);
+
+    }
+}

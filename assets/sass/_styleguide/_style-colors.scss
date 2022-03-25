@@ -1,0 +1,71 @@
+// main: ../style.scss
+
+:root {
+    // COLORS
+    --color-base-white:                         #fff;
+    --color-base-black:                         #000;
+
+    // Primary Colors
+
+    --color-primary:                            #12427E;
+    --color-secondary:                          #FF5D4F;
+    --color-tertiary:                           #141739;
+    --color-quaternary:                         #457FCA;
+
+    // Primary Hover States (for buttons)
+    --color-primary-hover:                      #103b70;
+    --color-secondary-hover:                    #ff4433;
+
+    // Primary Active States (for buttons)
+    --color-primary-active:                     #0d2f59;
+    --color-secondary-ative:                    #ff2d1a;
+
+
+    // Neutral Shades
+    --color-neutral-0:                          #B2BDCB;
+    --color-neutral-1:                          #BAE6FF;
+    --color-neutral-2:                          #B5B5B5;
+    --color-neutral-3:                          #707070;
+
+    --color-neutral-4:                          rgba(81, 118, 167, 0.08); /* used in hover state of table row*/
+    --color-neutral-5:                          rgba(40, 73, 117, 0.15); /* border color of table rows */
+
+    --color-neutral-6:                          #F1F4F8;
+    --color-neutral-7:                          #E4ECF6;
+    --color-neutral-8:                          #A3B0E0;
+    --color-neutral-9:                          #8499B2;
+
+
+
+    // Semantic Colors
+    --color-semantic-green:                     #03D68A;
+    --color-semantic-blue:                      #1F86E5;
+    --color-semantic-orange:                    #FF5858;
+    --color-semantic-red:                       #FB223C;
+    --color-semantic-yellow:                    #F6A833;
+    --color-semantic-violet:                    #5660D4;
+
+
+    --color-success:                            var(--color-semantic-green);
+    --color-success-hover:                      #03c980;
+    --color-success-active:                     #03b070;
+    --color-danger:                             var(--color-semantic-red);
+    --color-danger-hover:                       #fa1e38;
+    --color-danger-active:                      #fa0522;
+    --color-warning:                            var(--color-semantic-yellow);
+    --color-warning-hover:                      #f6a123;
+    --color-warning-active:                     #f5970a;
+    --color-info:                               var(--color-semantic-blue);
+    --color-info-hover:                         #1b83e4;
+    --color-info-active:                        #1876cd;
+}
+
+/* used as bg in circle elements inside the card */
+$cardAccentColors: 
+#FFF7D6, #FFF7D6, 
+#D4DAFF, #D4DAFF, 
+#CAF9FD, #CAF9FD, 
+#E1FFE3, #E1FFE3, 
+#FFE7CB, #FFE7CB, 
+#FFC6FF, #FFC6FF, 
+#B8D1FF, #B8D1FF;
