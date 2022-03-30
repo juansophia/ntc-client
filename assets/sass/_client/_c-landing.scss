@@ -1,7 +1,7 @@
 .ct-c-landing {
     .brand-logo {
-        @include mq($from: desktop-small) {
-            height: 74px;
+        @include mq($from: desktop-regular) {
+            height: 131px;
         }
     }
 
@@ -16,21 +16,24 @@
     }
 
     .ct-card {
+        min-height: 180px;
+        width: 100%;
+
         @include mq($from: mobile-landscape) {
-            max-width: 300px;
+            width: 300px;
+        }
+        @include mq($from: tablet-portrait) {
+            min-height: 230px;
         }
         @include mq($from: tablet-landscape) {
-            padding: var(--space-md) var(--space-md) var(--space-lg);
-        }
-
-        @include mq($from: desktop-regular) {
-            max-width: 360px;
+            padding: var(--space-lg) var(--space-md) var(--space-lg);
         }
     }
 
     .ct-card > .icon{
         height: 90px;
         object-fit: contain;
+        margin-bottom: var(--space-md);
     }
 
     .ct-card > .p{
@@ -50,13 +53,15 @@
     padding: var(--space-lg) var(--space-rg) var(--space-rg);
 
     @include mq($from: desktop-small) {
-        width: calc(100% - 40vw);
+        // width: calc(100% - 40vw);
         padding-top: var(--space-sm);
-
+        max-width: 945px;
+        margin: auto;
     }
 
     @include mq($from: desktop-regular) {
-        width: calc(100% - 42vw);
+        // width: calc(100% - 42vw);
+        gap: 4rem;
     }
 }
 

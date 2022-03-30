@@ -12,6 +12,9 @@ Removed for now removed features.
 Fixed for any bug fixes.
 Security in case of vulnerabilities.
 
+## [1.0.0] - 2022-03-29
+### Changed
+-Changed landing page
 
 ## [1.0.0] - 2022-03-04
 ### Changed

@@ -31,8 +31,10 @@ Cards
 .ct-card {
     background-color: var(--color-base-white);
     box-shadow: var(--card-shadow-1);
-    border-radius: var(--border-radius-rg);
+    border-radius: var(--border-radius-xs);
     padding: var(--space-md) var(--space-md);
+
+    min-width: 200px;
 
     @include mq($from: tablet-landscape) {
         padding: var(--space-lg) var(--space-md);
@@ -93,6 +95,43 @@ Cards
         position: absolute;
         z-index: 1;
         left: -25%;
+    }
+}
+
+.ct-card--transparent {
+    border: 0.5px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 17px 40px -1px rgba(0, 37, 167, 0.05);
+    backdrop-filter: blur(50px);
+    background: transparent;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+
+    > *:not(.btn) {
+        color: var(--color-base-white);
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 20px;
+        left: 20px;
+        background-color:var(--color-quaternary);
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        transform: scale(0);
+        transform-origin: 50% 50%;
+        transition: transform 0.3s ease-out;
+    }
+    
+    &:hover {
+        border-color: transparent;
+
+        &:before {
+            transform: scale(24);
+        }
     }
 }
 

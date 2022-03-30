@@ -9,7 +9,7 @@ Presets
 :root {
     --border-radius-rg: 14px;
     --border-radius-sm: 10px;
-    --border-radius-xs: 5px;
+    --border-radius-xs: 4px;
 }
 
 // 2.Base
@@ -268,6 +268,13 @@ BACKGROUND
     background-image: url('../img/bg/landing-bg.jpg');
     @extend %bg-image;
     background-position: left bottom;
+}
+
+.bg--landing-dark {
+    background-image: linear-gradient(280.45deg, #000E37 47.28%, rgba(13, 42, 128, 0.55) 89.95%), url('../img/bg/ntc-bldg.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: left top;
 }
 
 .bg--building {

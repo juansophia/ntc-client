@@ -32,42 +32,44 @@
     <!--    <main data-scroll>-->
     <!--        <div data-scroll-content>-->
 
-    <main class="bg--landing">
-        <section class="ct-c-landing d-flex">
-            <div class="ct-c-landing__main">
-                <div class="ct-landing__header">
-                    <img class="brand-logo" src="assets/img/logo/ntc-logo.png" alt="NTC | National Telecommunications Commission">
-                </div>
-                <div class="ct-cards-wrapper">
-                    <a class="ct-card ct-card--centered bg--glass hover--up hover--border-primary" href="landing-2.php">
-                        <img class="icon" src="assets/img/landing/ic-licensing.svg" alt="">
-                        <h2 class="text-center text--rg font--tertiary"> Licensing </h2>
-                        <p class="text-center">Fusce ac erat sit amet mi dictum tincidunt vitae non dui.</p>
-                    </a>
-                    <a class="ct-card ct-card--centered bg--glass hover--up hover--border-primary" href="landing-2.php">
-                        <img class="icon" src="assets/img/landing/ic-case.svg" alt="">
-                        <h2 class="text-center text--rg font--tertiary"> Case Management </h2>
-                        <p class="text-center">Fusce ac erat sit amet mi dictum tincidunt vitae non dui.</p>
-                    </a>
-                    <a class="ct-card ct-card--centered bg--glass hover--up hover--border-primary" href="landing-2.php">
-                        <img class="icon" src="assets/img/landing/ic-regulatory.svg" alt="">
-                        <h2 class="text-center text--rg font--tertiary"> Management and
-                            Support </h2>
-                        <p class="text-center">Fusce ac erat sit amet mi dictum tincidunt vitae non dui.</p>
-                    </a>
-                    <a class="ct-card ct-card--centered bg--glass hover--up hover--border-primary" href="landing-2.php">
-                        <img class="icon" src="assets/img/landing/ic-support.svg" alt="">
-                        <h2 class="text-center text--rg font--tertiary"> Document
-                            Management</h2>
-                        <p class="text-center">Fusce ac erat sit amet mi dictum tincidunt vitae non dui.</p>
-                    </a>
-                </div>
+    <main class="bg--landing-dark">
+        <section class="ct-c-landing">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-lg-5">
 
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="ct-c-landing__main">
+                            <div class="ct-landing__header">
+                                <img class="brand-logo" src="assets/img/logo/ntc-logo.png" alt="NTC | National Telecommunications Commission">
+                            </div>
+                            <div class="ct-cards-wrapper">
+                                <a class="ct-card ct-card--transparent hover--up" href="landing-inner.php">
+                                    <img class="icon" src="assets/img/landing/ic-case.svg" alt="">
+                                    <h2 class="text--md"> Case Management </h2>
+                                </a>
+                                <a class="ct-card ct-card--transparent hover--up" href="landing-inner.php">
+                                    <img class="icon" src="assets/img/landing/ic-licensing.svg" alt="">
+                                    <h2 class="text--md"> Licensing Management</h2>
+                                </a>
+                                <a class="ct-card ct-card--transparent hover--up" href="landing-inner.php">
+                                    <img class="icon" src="assets/img/landing/ic-regulatory.svg" alt="">
+                                    <h2 class="text--md"> Management and
+                                        Support </h2>
+                                </a>
+                                <a class="ct-card ct-card--transparent hover--up" href="landing-inner.php">
+                                    <img class="icon" src="assets/img/landing/ic-support.svg" alt="">
+                                    <h2 class="text--md"> Document
+                                        Management</h2>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="ct-c-landing__display">
-                <img src="assets/img/landing/display.png" alt="">
-            </div>
 
         </section>
         <!--</div>-->
