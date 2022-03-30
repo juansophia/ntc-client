@@ -12,6 +12,13 @@ Removed for now removed features.
 Fixed for any bug fixes.
 Security in case of vulnerabilities.
 
+## [1.0.0] - 2022-03-30
+### Changed
+- Header
+
+### Added
+- Submenu on nav
+
 ## [1.0.0] - 2022-03-29
 ### Changed
 -Changed landing page

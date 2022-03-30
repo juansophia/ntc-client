@@ -48,12 +48,13 @@ Header
     // }
 
     .ct-c-header__secondary {
-      background: var(--color-base-white);
       box-shadow: unset;
     }
 
     .ct-c-header__brand {
-      height: 35px !important;
+      @include mq($from: desktop-small) {
+        height: 44px !important;
+      }
     }
 
     .bg-white-on-scroll {

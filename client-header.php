@@ -1,24 +1,57 @@
 <!-- 'c' prefix for 'client' -->
 <header class="ct-header ct-c-header header--fixed">
 
-    <!-- upper header -->
+    <!-- lower header -->
+    <div class="ct-c-header__secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="ct-c-header__wrapper">
+                        <div class="ct-c-header__block d-none d-lg-block">
+                            <a href="home.php">
+                                <img class="ct-c-header__brand" src="assets/img/logo/ntc-logo-with-text-white.png" alt="logo">
+                            </a>
+                        </div>
+
+                        <div class="ct-c-header__block">
+                            <ul class="ct-c-header__nav">
+                                <li class="ct-c-nav__item">
+                                    Philippine Standard Time:
+                                    <span class="d-block">Tuesday, March 08, 2022, 1:11:30 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- lower header -->
     <div class="ct-c-header__primary">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="ct-c-header__wrapper">
-                        <div class="ct-c-header__block">
+                        <div class="ct-c-header__block d-lg-none">
                             <a href="home.php">
-                                <img class="ct-c-header__brand" src="assets/img/logo/ntc-logo.png" alt="logo">
+                                <img class="ct-c-header__brand" src="assets/img/logo/ntc-logo-with-text-white.png" alt="logo">
                             </a>
                         </div>
-                        <div class="ct-c-header__block ct-c-header__block--centered d-none d-lg-block">
+
+                        <div class="ct-c-header__block d-none d-lg-block">
                             <ul class="ct-c-header__nav">
-                                <li class="ct-c-nav__item">
-                                    <a class="ct-c-nav__link" href="licensing-management.php">Licensing Management</a>
+                                <li class="ct-c-nav__item ct-nav--has-submenu dropdown">
+                                    <a class="ct-c-nav__link active" href="licensing-management.php" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Licensing Management <span class="header__arrow"><i class="fe fe-chevron-down"></i></span></a>
+
+                                    <!-- submenu -->
+                                    <ul role="menu" aria-labelledby="dropdownMenu" class="dropdown-menu ct-submenu__container">
+                                        <li class="dropdown-submenu"><a href="#" class="dropdown-item">Authorization Case</a></li>
+                                        <li class="dropdown-submenu"><a href="#" class="dropdown-item">Administrative Case</a></li>
+                                    </ul>
                                 </li>
                                 <li class="ct-c-nav__item">
-                                    <a class="ct-c-nav__link active" href="payments.php">Payments</a>
+                                    <a class="ct-c-nav__link" href="payments.php">Payments</a>
                                 </li>
                                 <li class="ct-c-nav__item">
                                     <a class="ct-c-nav__link" href="client-complaints.php">Client Complaints</a>

@@ -142,3 +142,26 @@
         justify-content: space-between;
     }
 }
+
+
+/*
+*
+* Submenu
+*
+*/
+
+.ct-submenu__container {
+    background-color: var(--c-header-primary-bg);
+    border-radius: 4px;
+    top: 2rem !important;
+    min-width: 165px;
+
+    .dropdown-item{
+        color: var(--color-base-white);
+
+        &:hover {
+            color: var(--color-base-white);
+            background-color: var(--color-quaternary-hover);
+        }
+    }
+  }

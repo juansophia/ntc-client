@@ -93,10 +93,10 @@ button,
     background-color: var(--color-base-white);
 
     &--client {
-        padding-top: 80px; // height of the client header
+        padding-top: 140px; // height of the client header
 
         @include mq($from: tablet-portrait) {
-            padding-top: 92px; // height of the client header
+            padding-top: 160px; // height of the client header
         }
     }
 

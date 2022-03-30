@@ -1,11 +1,14 @@
-
+:root {
+    --c-header-primary-bg: var(--color-quaternary);
+    --c-header-secondary-bg: var(--color-primary);
+}
 /*-------------------
 
 GLOBAL HEADER FOR CLIENT
 
 -------------------*/
 .ct-c-header {
-    padding: var(--space-sm) var(--space-sm) 0;
+    // padding: var(--space-sm) var(--space-sm) 0;
     min-height: 66px;
 
     &.header--onScroll {
@@ -34,6 +37,10 @@ GLOBAL HEADER FOR CLIENT
     width: auto;
     object-fit: contain;
     transition: 0.2s;
+
+    @include mq($from: desktop-small) {
+        height: 50px;
+    }
 }
 
 .ct-c-header__nav {
@@ -66,7 +73,6 @@ GLOBAL HEADER FOR CLIENT
         }
 
         &.active{
-            opacity: 1;
 
             &::after {
                 opacity: 1;
@@ -100,18 +106,17 @@ GLOBAL HEADER FOR CLIENT
     transition: all 0.33s ease;
 }
 
-/* upper header */
+/* primary header */
 .ct-c-header__primary {
-    background: linear-gradient(89.99deg, #457FCA 15.14%, #5691C8 106.39%);
+    // background: linear-gradient(89.99deg, #457FCA 15.14%, #5691C8 106.39%);
+    background-color: var(--c-header-primary-bg);
     box-shadow: 0px 17px 40px -1px rgba(0, 37, 167, 0.05);
-    border-radius: 10px;
     padding: var(--space-xs) 0;
     transition: 0.2s;
 
     .ct-c-nav__link {
         color: var(--color-base-white);
         font-family: var(--font-tertiary);
-        opacity: 0.4;
     }
 
     .ct-c-nav__item {
@@ -136,9 +141,21 @@ CLIENT HEADER - SECONDARY
 -------------------*/
 .ct-c-header__secondary {
     // background: linear-gradient(91.47deg, rgba(255, 255, 255, 0.67) 1.2%, rgba(255, 255, 255, 0.18) 89.61%);
-    background-color: var(--color-base-white);
+    background-color: var(--c-header-secondary-bg);
     box-shadow: 0px 17px 40px -1px rgba(0, 37, 167, 0.05);
     transition: 0.2s;
+    padding: var(--space-rg) 0;
+
+    .ct-c-header__wrapper {
+        justify-content: space-between;
+    }
+
+    .ct-c-nav__item,
+    .ct-c-nav__link {
+        color: var(--color-base-white);
+        font-family: var(--font-tertiary);
+        @include x-rem(font-size, 14px);
+    }
 
     .ct-c-nav__link {
         display: block;
@@ -155,3 +172,4 @@ CLIENT HEADER - SECONDARY
         }
     }
 }
+
