@@ -8,7 +8,7 @@
                 <div class="col-md-12">
                     <div class="ct-c-header__wrapper">
                         <div class="ct-c-header__block">
-                            <a href="home.php">
+                            <a href="licensing-management.php">
                                 <img class="ct-c-header__brand" src="assets/img/logo/ntc-logo.png" alt="logo">
                             </a>
                         </div>

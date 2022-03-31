@@ -12,16 +12,27 @@ Removed for now removed features.
 Fixed for any bug fixes.
 Security in case of vulnerabilities.
 
-## [1.0.0] - 2022-03-30
-### Changed
-- Header
+## [1.0.0] - 2022-03-31
+### Fixed
+- Fixed notif desc too wide on desktop-small
 
 ### Added
-- Submenu on nav
+- Added company on user-profile dropdown on header and mobile sidebar
+- Added submenu on mobile sidebar
+
+### Changed
+- Updated styleguide - colors, border-radius
+
+## [1.0.0] - 2022-03-30
+### Changed
+- Changed Header
+
+### Added
+- Added Submenu on nav
 
 ## [1.0.0] - 2022-03-29
 ### Changed
--Changed landing page
+- Changed landing page
 
 ## [1.0.0] - 2022-03-04
 ### Changed

@@ -98,8 +98,19 @@
         }
     }
 
+    .user__profile {
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+    }
+
     .user__name {
         font-family: var(--font-tertiary);
+    }
+
+    .user__company {
+        font-family: var(--font-secondary);
+        @include x-rem(font-size, 12px);
     }
 }
 
@@ -153,15 +164,18 @@
 .ct-submenu__container {
     background-color: var(--c-header-primary-bg);
     border-radius: 4px;
-    top: 2rem !important;
     min-width: 165px;
 
     .dropdown-item{
         color: var(--color-base-white);
+        font-size: 1rem;
+        font-family: var(--font-tertiary);
 
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             color: var(--color-base-white);
-            background-color: var(--color-quaternary-hover);
+            background-color: #52A9F9;
         }
     }
   }

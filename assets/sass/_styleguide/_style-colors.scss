@@ -8,19 +8,19 @@
     // Primary Colors
 
     --color-primary:                            #000080;
+    --color-primary-light:                      var(--color-semantic-blue);
+
     --color-secondary:                          #CE1126;
     --color-tertiary:                           #141739;
-    --color-quaternary:                         #1F86E5;
 
     // Primary Hover States (for buttons)
     --color-primary-hover:                      #000066;
     --color-secondary-hover:                    #bd0f24;
-    // --color-tertiary-hover:                     #003399;
-    --color-quaternary-hover:                   #1b83e4;
+
 
     // Primary Active States (for buttons)
     --color-primary-active:                     #00004d;
-    --color-secondary-ative:                    #a50d1f;
+    --color-secondary-active:                   #a50d1f;
 
 
     // Neutral Shades
@@ -40,23 +40,23 @@
 
 
     // Semantic Colors
-    --color-semantic-green:                     #03D68A;
+    --color-semantic-green:                     #06BF7D;
     --color-semantic-blue:                      #1F86E5;
     --color-semantic-orange:                    #FF5858;
     --color-semantic-red:                       #FB223C;
-    --color-semantic-yellow:                    #F6A833;
+    --color-semantic-yellow:                    #F89B3C;
     --color-semantic-violet:                    #5660D4;
 
 
     --color-success:                            var(--color-semantic-green);
-    --color-success-hover:                      #03c980;
-    --color-success-active:                     #03b070;
+    --color-success-hover:                      #05ad72;
+    --color-success-active:                     #059462;
     --color-danger:                             var(--color-semantic-red);
     --color-danger-hover:                       #fa1e38;
     --color-danger-active:                      #fa0522;
     --color-warning:                            var(--color-semantic-yellow);
-    --color-warning-hover:                      #f6a123;
-    --color-warning-active:                     #f5970a;
+    --color-warning-hover:                      #f78c22;
+    --color-warning-active:                     #f68009;
     --color-info:                               var(--color-semantic-blue);
     --color-info-hover:                         #1b83e4;
     --color-info-active:                        #1876cd;

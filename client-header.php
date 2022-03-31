@@ -8,7 +8,7 @@
                 <div class="col-md-12">
                     <div class="ct-c-header__wrapper">
                         <div class="ct-c-header__block d-none d-lg-block">
-                            <a href="home.php">
+                            <a href="licensing-management.php">
                                 <img class="ct-c-header__brand" src="assets/img/logo/ntc-logo-with-text-white.png" alt="logo">
                             </a>
                         </div>
@@ -34,7 +34,7 @@
                 <div class="col-md-12">
                     <div class="ct-c-header__wrapper">
                         <div class="ct-c-header__block d-lg-none">
-                            <a href="home.php">
+                            <a href="licensing-management.php">
                                 <img class="ct-c-header__brand" src="assets/img/logo/ntc-logo-with-text-white.png" alt="logo">
                             </a>
                         </div>
@@ -151,7 +151,10 @@
                                                 <div class="user__avatar">
                                                     <img class="thumb" src="assets/img/users/client-avatar.svg" alt="user avatar">
                                                 </div>
-                                                <span class="user__name">Hubert Sy</span>
+                                                <div class="user__profile">
+                                                    <span class="user__name">Hubert Sy</span>
+                                                    <span class="user__company truncate">Manila Broadcasting Communication</span>
+                                                </div>
                                             </div>
                                         </a>
                                         <div class="ct-user-dropdown__menu dropdown-menu" aria-labelledby="c-header-user-dropdown">

@@ -383,7 +383,7 @@ START: Payment Receipt
                 </div>
 
                 <div class="d-flex justify-content-center my-3">
-                    <a class="btn btn--success btn--full-width" href="home.php">OK</a>
+                    <a class="btn btn--success btn--full-width" href="licensing-management.php">OK</a>
                 </div>
             </div>
         </div>

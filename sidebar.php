@@ -5,7 +5,14 @@ START: Sidebar Navigation for Mobile View // CLIENT
 ------------------->
 <nav class="" id="cd-lateral-nav">
     <ul class="cd-navigation">
-        <li><a class="cd-navigation__link page--active" href="licensing-management.php">Licensing Management</a></li>
+        <li class="item-has-children-submenu">
+            <a class="cd-navigation__link page--active" href="licensing-management.php">Licensing Management</a>
+            <span class="item__arrow"><i class="fe fe-chevron-right"></i></span>
+            <ul class="sub-menu sub-menu-inner">
+                <li><a class="cd-navigation__link link-has-icon" href="#">Authorization Case</a></li>
+                <li><a class="cd-navigation__link link-has-icon" href="#">Administrative Case</a></li>
+            </ul>
+        </li>
         <li><a class="cd-navigation__link" href="payments.php">Payments</a></li>
         <li><a class="cd-navigation__link" href="client-complaints.php">Client Complaints</a></li>
         <li class="item-has-children-submenu">
@@ -13,7 +20,10 @@ START: Sidebar Navigation for Mobile View // CLIENT
                 <div class="user__avatar">
                     <img class="thumb" src="assets/img/users/client-avatar.svg" alt="user avatar">
                 </div>
-                Hubert Sy
+                <div class="user__profile">
+                    <span class="user__name">Hubert Sy</span>
+                    <span class="user__company truncate">Manila Broadcasting Communication</span>
+                </div>
             </a>
             <span class="item__arrow"><i class="fe fe-chevron-right"></i></span>
             <ul class="sub-menu sub-menu-inner">

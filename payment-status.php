@@ -15,7 +15,7 @@ include("client-header.php");
                     <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
                         <nav aria-label="breadcrumb">
                             <ol class="ct-breadcrumb breadcrumb">
-                                <li class="breadcrumb-item"><a href="client-home.php">Home</a></li>
+                                <li class="breadcrumb-item"><a href="client-licensing-management.php">Home</a></li>
                                 <li class="breadcrumb-item"><a href="client-case-records.php">Case Records</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">P001</li>
                             </ol>

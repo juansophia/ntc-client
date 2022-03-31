@@ -16,7 +16,7 @@ include("client-header.php");
 
                     <nav aria-label="breadcrumb" class="mb-3">
                         <ol class="ct-breadcrumb breadcrumb">
-                            <li class="breadcrumb-item"><a href="home.php">Home</a></li>
+                            <li class="breadcrumb-item"><a href="licensing-management.php">Home</a></li>
                             <li class="breadcrumb-item"><a href="case-records.php">Case Records</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Case Records Details</li>
                         </ol>

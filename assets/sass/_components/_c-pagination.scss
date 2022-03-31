@@ -9,9 +9,9 @@ Paginations
 // 1. sass vars / css vars
 $pagination-bg: transparent;
 $pagination-border: rgba(181, 181, 181, 0.5);
-$pagination-text-color: var(--color-neutral-0);
-$pagination-active-bg: var(--color-primary);
-$pagination-active-border: var(--color-primary);
+$pagination-text-color: var(--color-neutral-2);
+$pagination-active-bg: var(--color-primary-light);
+$pagination-active-border: var(--color-primary-light);
 
 // 2. Base
 .ct-pagination {
