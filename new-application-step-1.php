@@ -23,56 +23,50 @@ include("client-header.php");
                     </div>
 
                     <!-- steps -->
-                    <ul class="ct-stepper d-flex justify-content-center">
+                    <!-- <ul class="ct-stepper d-flex justify-content-center">
                         <li class="stepper-item active"> Registration, Certificate, Permit and Licenses </li>
                         <li class="stepper-item">Station/Equipment / System/Others</li>
                         <li class="stepper-item">Lorem ipsum dolor sit.</li>
-                    </ul>
+                    </ul> -->
 
                     <!-- cards container -->
                     <div class="ct-application-cards">
                         <div class="ct-cards-grid frm__radio-group">
 
-                            <!-- card  -->
-                            <input class="input--hidden" type="radio" id="sample-type-1" name="new-application-type">
-                            <label class="ct-card ct-card--colored" for="sample-type-1">
-                                <h2 class="text--rg font--tertiary color--tertiary"> Certificate of Authority (CA) / Provisional Authority (PA) </h2>
-                                <span class="hyperlink hyperlink--primary" href="#">Click here <i class="fe fe-arrow-right ml-2"></i></span>
-                            </label>
+                            <!-- start : card with select2 dropdown  -->
+                            <div class="frm__select-card">
+                                <select class="frm__input select2" name="sample">
+                                    <option value=""></option>
+                                    <option value="A">2019-223</option>
+                                    <option value="B">2019-985</option>
+                                    <option value="B">2019-575</option>
+                                    <option value="D">2019-234</option>
+                                    <option value="E">2019-783</option>
+                                    <option value="F">2019-985</option>
+                                </select>
 
-
-                            <!-- card with overlay for choices [WITH CLASS: ct-card--withOverlay] -->
-                            <input class="input--hidden" type="radio" id="sample-type-3" name="new-application-type">
-                            <label class="ct-card ct-card--colored ct-card--withOverlay" for="sample-type-3">
-                                <h2 class="text--rg font--tertiary color--tertiary"> Certificate of Public Convenience (CPC) / Provisional Authority (PA) </h2>
-                                <span class="hyperlink hyperlink--primary" href="#">Click here <i class="fe fe-arrow-right ml-2"></i></span>
-
-                                <!-- new or extention? -->
-                                <div class="ct-overlay-options">
-                                    <a class="btn btn--light br--xs" href="new-application-step-badges.php">New</a>
-                                    <a class="btn btn--light br--xs" href="new-application-step-badges.php">Extension</a>
+                                <div class="ct-card ct-card--neutral" for="sample-type-1">
+                                    <h2 class="text--rg font--tertiary color--tertiary"> Certificate of Authority (CA) / Provisional Authority (PA) </h2>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="font--tertiary color--tertiary">Click here </span>
+                                        <span class="btn btn--primary btn--icon-md btn--circle"><i class="fe fe-arrow-down font-weight-bold"></i></span>
+                                    </div>
                                 </div>
-                            </label>
+                            </div>
+                            <!-- end : card with select2 dropdown  -->
 
-                            <!-- card  -->
-                            <input class="input--hidden" type="radio" id="sample-type-4" name="new-application-type">
-                            <label class="ct-card ct-card--colored" for="sample-type-4">
-                                <h2 class="text--rg font--tertiary color--tertiary"> Certificate of Public Convenience (CPCN) / Provisional Authority (PA) </h2>
-                                <span class="hyperlink hyperlink--primary" href="#">Click here <i class="fe fe-arrow-right ml-2"></i></span>
-                            </label>
+                            <!-- start : card with select2 dropdown  -->
+                            <div class="frm__select-card">
 
-                            <!-- card with overlay for choices [WITH CLASS: ct-card--withOverlay] -->
-                            <input class="input--hidden" type="radio" id="sample-type-5" name="new-application-type">
-                            <label class="ct-card ct-card--colored ct-card--withOverlay" for="sample-type-5">
-                                <h2 class="text--rg font--tertiary color--tertiary"> Others </h2>
-                                <span class="hyperlink hyperlink--primary" href="#">Click here <i class="fe fe-arrow-right ml-2"></i></span>
-
-                                <!-- Deed of Sale and Transfer or Transfer of Location? -->
-                                <div class="ct-overlay-options">
-                                    <a class="btn btn--light br--xs" href="new-application-step-badges.php">Deed of Sale and Transfer</a>
-                                    <a class="btn btn--light br--xs" href="new-application-step-badges.php">Transfer of Locationn</a>
+                                <div class="ct-card ct-card--neutral" for="sample-type-1">
+                                    <h2 class="text--rg font--tertiary color--tertiary"> Certificate of Authority (CA) / Provisional Authority (PA) </h2>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="font--tertiary color--tertiary">Click here </span>
+                                        <span class="btn btn--primary btn--icon-md btn--circle"><i class="fe fe-arrow-down font-weight-bold"></i></span>
+                                    </div>
                                 </div>
-                            </label>
+                            </div>
+                            <!-- end : card with select2 dropdown  -->
                         </div>
                     </div>
 

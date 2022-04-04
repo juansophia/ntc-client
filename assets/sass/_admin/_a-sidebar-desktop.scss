@@ -1,14 +1,15 @@
 :root {
-    --a-nav-link-color: var(--color-neutral-9);
-    --a-nav-link-color-hover: var(--color-primary);
-    --a-nav-link-bg-hover: var(--color-neutral-4);
+    --a-nav-link-color: var(--color-base-white);
+    --a-nav-link-color-hover: var(--color-base-white);
+    --a-nav-link-bg-hover: var(--color-primary-light-hover);
 
+    --a-nav-sidebar-bg: var(--color-primary-light);
     --a-nav-sidebar-width: 320px;
     --a-nav-link-width: 283px;
 
     // submenu items
-    --a-submenu-link-color: var(--color-neutral-9);
-    --a-submenu-link-color-hover: var(--color-secondary);
+    --a-submenu-link-color: var(--color-base-white);
+    --a-submenu-link-color-hover: var(--color-primary);
 }
 
 .a-sidebar-menu {
@@ -18,14 +19,14 @@
     padding: var( --space-md) var(--space-md);
     padding-right: 5px;
     width: 90px;
-    height: 97%;
+    height: calc(100vh - 120px);
     position: fixed;
-    top: 50%;
+    top: 0;
     left: 10px;
-    transform: translateY(-50%);
+    transform: translateY(100px);
     z-index: 99;
     overflow-x: hidden;
-    background: rgba($color: #FFFFFF, $alpha: 0.6);
+    background: var(--a-nav-sidebar-bg);
     transition: all 0.2s;
     box-shadow: -10px 0px 88px rgba(0, 0, 0, 0.12);
 
@@ -93,6 +94,8 @@ SIDEBAR PROFILE
     border-radius: 50%;
     flex-shrink: 0;
 
+    border: solid 3px var(--a-nav-link-color-hover);
+
     img {
         @extend %img-cover;
     }
@@ -105,12 +108,14 @@ SIDEBAR PROFILE
 
     .a-profile__name {
         font-family: var(--font-primary);
+        color: var(--a-nav-link-color);
     }
 
     .a-profile__role {
-        font-family: var(--font-primary);
-        color: var(--color-secondary);
-        @include x-rem(font-size, 12px);
+        font-family: var(--font-tertiary);
+        color: var(--a-nav-link-color);
+        @include x-rem(font-size, 10px);
+        text-transform: uppercase;
     }
 }
 
@@ -147,7 +152,9 @@ SIDEBAR NAV LINKS
         }
 
         path {
+            fill: var(--color-base-white);
             transition: all .33s;
+            opacity: .35;
         }
     }
 
@@ -157,7 +164,8 @@ SIDEBAR NAV LINKS
         text-decoration: none;
 
         svg path {
-            fill: var(--a-nav-link-color-hover);
+            // fill: var(--a-nav-link-color-hover);
+            opacity: 1;
         }
     }
 
@@ -165,7 +173,8 @@ SIDEBAR NAV LINKS
         color: var(--a-nav-link-color-hover) !important;
 
         svg path {
-            fill: var(--a-nav-link-color-hover);
+            // fill: var(--a-nav-link-color-hover);
+            opacity: 1;
         }
     }
 
@@ -209,7 +218,6 @@ SHOW HIDDEN ELEMENTS / EXPAND
 -------------------*/
 .a-sidebar-menu.expand {
     width: var(--a-nav-sidebar-width);
-    background: var(--color-base-white);
 
 
     .a-menu__profile {

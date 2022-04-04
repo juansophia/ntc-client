@@ -48,3 +48,24 @@ RECORDS SUMMARY MODAL
         }
     }
 }
+
+/*-------------------
+
+GENERATE NUMBER MODAL
+
+-------------------*/
+
+.ct-modal__generate {
+    .modal-body {
+        padding-top: var(--space-xl);
+        padding-bottom: var(--space-xl);
+    }
+
+    .modal__illus {
+        overflow: hidden;
+
+        lottie-player {
+            transform: scale(5.5);
+        }
+    }
+}

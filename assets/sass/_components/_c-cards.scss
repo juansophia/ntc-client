@@ -135,10 +135,10 @@ Cards
     }
 }
 
-@for $i from 1 through length($cardAccentColors) {
-    .ct-card--colored:nth-child(#{length($cardAccentColors)}n+#{$i})::before {
-        background-color: nth($cardAccentColors, $i)
-    }
+.ct-card--neutral {
+    background: #F1F4F9;
+    border: 1.5px solid #C3C9DF;
+    box-shadow: 0px 17px 40px -8px rgba(0, 0, 0, 0.04);
 }
 
 .ct-card--centered {
@@ -164,3 +164,9 @@ Cards
     // }
 }
 
+
+@for $i from 1 through length($cardAccentColors) {
+    .ct-card--colored:nth-child(#{length($cardAccentColors)}n+#{$i})::before {
+        background-color: nth($cardAccentColors, $i)
+    }
+}

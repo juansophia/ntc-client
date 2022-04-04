@@ -338,6 +338,9 @@ fieldset:disabled a.btn {
     padding-right: 1.5em;
 }
 
+.btn--circle {
+    border-radius: 50%;
+}
 .btn-secondary:not(:disabled):not(.disabled):active,
 .btn-secondary:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle {

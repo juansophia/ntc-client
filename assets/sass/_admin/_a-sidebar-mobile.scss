@@ -1,4 +1,5 @@
 #cd-lateral-nav.cd-lateral-nav--admin {
+    background-color: var(--a-nav-sidebar-bg);
     &.lateral-menu-is-open {
         display: flex;
         flex-direction: column;

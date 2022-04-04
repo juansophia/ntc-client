@@ -1,17 +1,54 @@
 .ct-application-cards {
     .ct-cards-grid {
-        grid-template-columns: repeat(auto-fill, minmax(208px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
     .ct-card {
         position: relative;
-        min-height: 182px;
+        min-height: 220px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 1.5rem;
+        justify-content: space-between;
         cursor: pointer;
-        border: 1px solid transparent;
         overflow: hidden;
+
+        * {
+            z-index: 2;
+            transition: color 0.3s;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: var(--space-lg);
+            right: var(--space-md);
+            width: 40px;
+            height: 40px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: all 0.3s ease-in;
+            z-index: 1;
+        }
+
+        &:hover {
+            border-color: transparent;
+            &::before {
+                transform: scale(26);
+
+                @include mq($from: tablet-portrait) {
+                    transform: scale(16);
+                }
+            }
+
+            h2, span {
+                color: var(--color-base-white) !important;
+            }
+        }
+
+      
     }
 
     .ct-badge {

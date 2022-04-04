@@ -1,7 +1,7 @@
 <!-- 'c' prefix for 'client' -->
 <header class="ct-header ct-c-header header--fixed">
 
-    <!-- lower header -->
+    <!-- upper header -->
     <div class="ct-c-header__secondary">
         <div class="container">
             <div class="row">

@@ -24,7 +24,7 @@
         flex: 1 1 auto;
 
         @include mq($from: desktop-small) {
-            padding-top: 60px;
+            padding-top: 140px;
         }
     }
 
@@ -40,7 +40,7 @@
         }
 
         @include mq($from: desktop-small) {
-            padding-top: 130px;
+            padding-top: 200px;
         }
     }
 }

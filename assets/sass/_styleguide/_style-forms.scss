@@ -243,6 +243,23 @@ select {
     }
 }
 
+.frm__select-card {
+    position: relative;
+
+    span.select2.select2-container.select2-container--default {
+        height: 100%;
+        position: absolute;
+        z-index: 3;
+    }
+
+    span.select2-selection.select2-selection--single.frm__input {
+        background: transparent !important;
+        border: none !important;    
+        height: 100%;
+        opacity: 0;
+    }
+}
+
 option[disabled] {
     color: var(--form-placeholder-color);
 }

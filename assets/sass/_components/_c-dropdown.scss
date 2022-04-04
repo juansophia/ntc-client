@@ -175,7 +175,7 @@
         &:active,
         &:focus {
             color: var(--color-base-white);
-            background-color: #52A9F9;
+            background-color: var(--color-primary-light-hover);
         }
     }
   }
