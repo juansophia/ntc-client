@@ -7,7 +7,7 @@ START: Case Records Summary -- edit info
     <div class="modal-dialog modal-md">
         <!-- Modal content-->
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header border-0">
                 <h3 class="modal-title text-center w-75 m-auto">Case Records Summary</h3>
                 <button type="button" class="btn modal__close" data-dismiss="modal"><i class="fe fe-x"></i></button>
             </div>
@@ -17,39 +17,39 @@ START: Case Records Summary -- edit info
                     <span class="text--xl color--secondary font--tertiary">2019-223</span>
                 </div>
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Unique Identifier Number:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">2568452</span>
                     </div>
                 </div>
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Company Name:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Warehouse Company</span>
                     </div>
                 </div>
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Type of Application:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Business</span>
                     </div>
                 </div>
 
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Status of Application:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data tag tag--danger pl-0">For Payment</span>
                     </div>
                 </div>
@@ -57,29 +57,29 @@ START: Case Records Summary -- edit info
                 <br><!-- space for form groupinng -->
 
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Applicant Name:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">GMA NETWORK INC. vs SKYCABLE CORP</span>
                     </div>
                 </div>
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Complete Address:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Globe Tower, 32nd Street corner 7th Avenue, Bonifacio Global City, Taguig.</span>
                     </div>
                 </div>
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label"> Nature of Application:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">CPCN to install, operate & maintain an International Broadband Service & Facilities and to charge rates</span>
                     </div>
                 </div>
@@ -87,47 +87,47 @@ START: Case Records Summary -- edit info
                 <br><!-- space for form groupinng -->
 
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Violation(s):</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">N/A</span>
                     </div>
                 </div>
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Date File:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">N/A</span>
                     </div>
                 </div>
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Payment Details</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">N/A</span>
                     </div>
                 </div>
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Hearing Venue:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Virtual Hearing: Platform - MS TEAMS</span>
                     </div>
                 </div>
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Hearing Date and Time:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <div class="d-flex justify-content-between flex-wrap align-items-center">
                             <span class="ct-records__data">January 15, 2021</span>
                         </div>
@@ -135,21 +135,21 @@ START: Case Records Summary -- edit info
                 </div>
 
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Order/Decision</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">N/A</span>
                     </div>
                 </div>
 
 
-                <div class="row align-items-center my-3">
-                    <div class="col-md-5">
+                <div class="row align-items-center my-2">
+                    <div class="col-md-3">
                         <span class="ct-records__label">Status:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Initial Hearing</span>
                     </div>
                 </div>
@@ -1293,11 +1293,11 @@ START: Registration Form Summary
                     <h2 class="text--rg mb-0">Applicant Details</h2>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Name:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Smart Telecom INC. </span>
                     </div>
                 </div>
@@ -1306,11 +1306,11 @@ START: Registration Form Summary
                     <h2 class="text--rg mb-0">Company Address</h2>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Address:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">6799 Smart Tower, Ayala Avenue, Bel-Air, Metro Manila, Makati City, 1112 </span>
                     </div>
                 </div>
@@ -1319,83 +1319,83 @@ START: Registration Form Summary
                     <h2 class="text--rg mb-0">Account Information</h2>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">First Name:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Joe </span>
                     </div>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Middle Name:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Doe</span>
                     </div>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Last Name:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Smith</span>
                     </div>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Suffix:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">N/A</span>
                     </div>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Gender:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Male</span>
                     </div>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Date of Birth:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">May 05, 1990</span>
                     </div>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Contact No.:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">09564464500</span>
                     </div>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Email Address:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">joesmith@samplemail.com</span>
                     </div>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Username</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">@joesmith</span>
                     </div>
                 </div>
@@ -1459,7 +1459,7 @@ START: New Application Form Summary
                     <h2 class="text--rg mb-0">Type of Application</h2>
                 </div>
 
-                <div class="row my-3 px-3">
+                <div class="row my-2 px-3">
                     <div class="col-md-12 pr-2">
                         <span class="ct-records__data">Certificate of Public Convenience (CPC) and/or Provisional Authority (PA) - NEW</span>
                     </div>
@@ -1469,20 +1469,20 @@ START: New Application Form Summary
                     <h2 class="text--rg mb-0">Applicant Details</h2>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Category:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Broadcast Entity </span>
                     </div>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Name:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Manila Broadcasting Company</span>
                     </div>
                 </div>
@@ -1491,11 +1491,11 @@ START: New Application Form Summary
                     <h2 class="text--rg mb-0">Company Address</h2>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Address:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">6799 Smart Tower, Ayala Avenue, Bel-Air, Metro Manila, Makati City, 1112 </span>
                     </div>
                 </div>
@@ -1504,20 +1504,20 @@ START: New Application Form Summary
                     <h2 class="text--rg mb-0">Pleading Details</h2>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Application/Petition:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">CPC to install, operate and maintain 1 kilowatt FM Radio Broadcast Station in Imus, Cavite </span>
                     </div>
                 </div>
 
-                <div class="row my-3 px-3">
-                    <div class="col-md-5 pr-2">
+                <div class="row my-2 px-3">
+                    <div class="col-md-3 pr-2">
                         <span class="ct-records__label">Description:</span>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-9">
                         <span class="ct-records__data">Lorem ipsum dolor sit amet, consectetur elit. In eu elit nisi. Suspendisse mattis venenatis mi sed bibendum.</span>
                     </div>
                 </div>
@@ -1528,54 +1528,54 @@ START: New Application Form Summary
 
                 <div class="row px-3">
                     <div class="col-md-6">
-                        <div class="row my-3">
-                            <div class="col-5 pr-2">
+                        <div class="row my-2">
+                            <div class="col-6 pr-2">
                                 <span class="ct-records__label">Region:</span>
                             </div>
-                            <div class="col-7">
+                            <div class="col-6">
                                 <span class="ct-records__data">Region IV-A</span>
                             </div>
                         </div>
-                        <div class="row my-3">
-                            <div class="col-5 pr-2">
+                        <div class="row my-2">
+                            <div class="col-6 pr-2">
                                 <span class="ct-records__label">Province:</span>
                             </div>
-                            <div class="col-7">
+                            <div class="col-6">
                                 <span class="ct-records__data">Cavite</span>
                             </div>
                         </div>
-                        <div class="row my-3">
-                            <div class="col-5 pr-2">
+                        <div class="row my-2">
+                            <div class="col-6 pr-2">
                                 <span class="ct-records__label">City/Municipality:</span>
                             </div>
-                            <div class="col-7">
+                            <div class="col-6">
                                 <span class="ct-records__data">Imus</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-6">
-                        <div class="row my-3">
-                            <div class="col-5 pr-2">
+                        <div class="row my-2">
+                            <div class="col-6 pr-2">
                                 <span class="ct-records__label">Region:</span>
                             </div>
-                            <div class="col-7">
+                            <div class="col-6">
                                 <span class="ct-records__data">All</span>
                             </div>
                         </div>
-                        <div class="row my-3">
-                            <div class="col-5 pr-2">
+                        <div class="row my-2">
+                            <div class="col-6 pr-2">
                                 <span class="ct-records__label">Province:</span>
                             </div>
-                            <div class="col-7">
+                            <div class="col-6">
                                 <span class="ct-records__data">-</span>
                             </div>
                         </div>
-                        <div class="row my-3">
-                            <div class="col-5 pr-2">
+                        <div class="row my-2">
+                            <div class="col-6 pr-2">
                                 <span class="ct-records__label">City/Municipality:</span>
                             </div>
-                            <div class="col-7">
+                            <div class="col-6">
                                 <span class="ct-records__data">-</span>
                             </div>
                         </div>
@@ -1588,7 +1588,7 @@ START: New Application Form Summary
                     <h2 class="text--rg mb-0">Requirements</h2>
                 </div>
 
-                <div class="row align-items-center my-3 px-3">
+                <div class="row align-items-center my-2 px-3">
                     <div class="col-md-6">
                         <span class="ct-records__label">Congressional Franchise:</span>
                     </div>
@@ -1605,7 +1605,7 @@ START: New Application Form Summary
                 </div>
 
 
-                <div class="row align-items-center my-3 px-3">
+                <div class="row align-items-center my-2 px-3">
                     <div class="col-md-6">
                         <span class="ct-records__label">Petition:</span>
                     </div>
@@ -1622,7 +1622,7 @@ START: New Application Form Summary
                 </div>
 
 
-                <div class="row align-items-center my-3 px-3">
+                <div class="row align-items-center my-2 px-3">
                     <div class="col-md-6">
                         <span class="ct-records__label">Duly accomplished application for Permit to Purchase Transmitter:</span>
                     </div>
@@ -1639,7 +1639,7 @@ START: New Application Form Summary
                 </div>
 
 
-                <div class="row align-items-center my-3 px-3">
+                <div class="row align-items-center my-2 px-3">
                     <div class="col-md-6">
                         <span class="ct-records__label"> Duly accomplished application for Construction Permit:</span>
                     </div>
@@ -1655,7 +1655,7 @@ START: New Application Form Summary
                     </div>
                 </div>
 
-                <div class="row align-items-center my-3 px-3">
+                <div class="row align-items-center my-2 px-3">
                     <div class="col-md-6">
                         <span class="ct-records__label">Verification:</span>
                     </div>
@@ -1672,7 +1672,7 @@ START: New Application Form Summary
                 </div>
 
 
-                <div class="row my-3">
+                <div class="row my-2">
                     <div class="col-md-12">
                         <em class="text--sm">Note: You will not be able to withdraw your pleading once you click "Confirm and Submit."</em>
                     </div>

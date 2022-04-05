@@ -12,6 +12,18 @@ Removed for now removed features.
 Fixed for any bug fixes.
 Security in case of vulnerabilities.
 
+## [1.0.0] - 2022-04-05
+### Changed
+- Reduced whitespace on forms and data columns
+
+
+## [1.0.0] - 2022-04-04
+### Changed
+- Updated the cards in the Application Type page
+
+### Added
+- Added select2 dropdown when Application Type card is clicked 
+
 ## [1.0.0] - 2022-03-31
 ### Fixed
 - Fixed notif desc too wide on desktop-small

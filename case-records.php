@@ -12,7 +12,7 @@ include("client-header.php");
             <div class="row">
                 <div class="col-md-12">
 
-                    <h1 class="ct-page__title">Case Records</h1>
+                    <h1 class="ct-page__title">List of Authorization Cases</h1>
                     <div class="d-flex justify-content-between flex-wrap mb-3">
                         <nav aria-label="breadcrumb">
                             <ol class="ct-breadcrumb breadcrumb">
@@ -20,26 +20,26 @@ include("client-header.php");
                                 <li class="breadcrumb-item active" aria-current="page">Case Records</li>
                             </ol>
                         </nav>
-                        <a href="new-application-case.php" class="btn btn--primary px-4 grow-0">Submit New Case</a>
+                        <a href="new-application-step-1.php" class="btn btn--outline-secondary px-4 grow-0">Submit Application</a>
                     </div>
-
                     <div class="ct-table-settings__row">
                         <div class="ct-table-settings__col ct-table-settings__col--right">
-                            <!-- Entries -->
-                            <div class="ct-table__entries">
-                                <label>
-                                    Show
-                                    <div class="frm__select-group">
-                                        <select class="frm__input" name="example_length" aria-controls="example">
-                                            <option selected value="10">10</option>
-                                            <option value="25">25</option>
-                                            <option value="50">50</option>
-                                        </select>
-                                        <i class="select__icon fe fe-chevron-down px-0 pr-1" aria-hidden="true"></i>
-                                    </div>
-                                    Entries
-                                </label>
-                            </div>
+                            <!-- Nav pills / tab -->
+                            <ul class="ct-nav-pills nav nav-pills">
+                                <li class="nav-item">
+                                    <button class="nav-link active" aria-current="page">All</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link">Licenses</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link">Permits</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link">Certificates</button>
+                                </li>
+                            </ul>
+
 
                             <!-- Advanced Search -->
                             <div class="ct-advanced-search-group">
@@ -257,6 +257,38 @@ include("client-header.php");
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="d-flex justify-content-between align-items-center flex-wrap mt-4">
+                        <!-- Entries -->
+                        <div class="ct-table__entries">
+                            <label>
+                                Showng 1 to 5 of 25 rows
+                                <div class="frm__select-group">
+                                    <select class="frm__input" name="example_length" aria-controls="example">
+                                        <option selected value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                    </select>
+                                    <i class="select__icon fe fe-chevron-down px-0 pr-1" aria-hidden="true"></i>
+                                </div>
+                                entries per page
+                            </label>
+                        </div>
+                        <nav aria-label="Page navigation example">
+                            <ul class="ct-pagination pagination mb-3">
+                                <li class="page-item disabled">
+                                    <span class="page-link">Previous</span>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>

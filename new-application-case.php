@@ -8,7 +8,7 @@ include("header.php");
             <div class="row">
                 <div class="col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
                     <div class="c-landing__header">
-                        <img class="brand-logo" src="assets/img/logo/ntc-logo.png" alt="NTC | National Telecommunications Commission">
+                        <a href="case-records.php"><img class="brand-logo" src="assets/img/logo/ntc-logo.png" alt="NTC | National Telecommunications Commission"></a>
                     </div>
                     <div class="ct-card ct-card--reg">
                         <form action="">

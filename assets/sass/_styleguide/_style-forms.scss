@@ -247,18 +247,28 @@ select {
     position: relative;
 
     span.select2.select2-container.select2-container--default {
-        height: 100%;
         position: absolute;
-        z-index: 3;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        visibility: hidden;
+        z-index: -3;
+        height: 0;
     }
 
-    span.select2-selection.select2-selection--single.frm__input {
-        background: transparent !important;
-        border: none !important;    
-        height: 100%;
-        opacity: 0;
+    .frm__select-text {
+        @include x-rem(font-size, 18px);
     }
+
+    // span.select2-selection.select2-selection--single.frm__input {
+    //     background: transparent !important;
+    //     border: none !important;    
+    //     height: 100%;
+    //     opacity: 0;
+    // }
 }
+
+
 
 option[disabled] {
     color: var(--form-placeholder-color);
@@ -268,12 +278,10 @@ option[disabled] {
 .frm__title {
     @include x-rem(font-size, 22px);
     color: var(--color-primary);
-    margin-bottom: var(--space-md);
-    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+    margin-top: var(--space-rg);
 
-    @include mq($from: tablet-landscape) {
-        margin-top: var(--space-lg);
-    }
+   
 }
 
 .input--hidden {

@@ -42,12 +42,12 @@
                         <div class="ct-c-header__block d-none d-lg-block">
                             <ul class="ct-c-header__nav">
                                 <li class="ct-c-nav__item ct-nav--has-submenu dropdown">
-                                    <a class="ct-c-nav__link active" href="licensing-management.php" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Licensing Management <span class="header__arrow"><i class="fe fe-chevron-down"></i></span></a>
+                                    <a class="ct-c-nav__link active" href="licensing-management.php" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Case Management <span class="header__arrow"><i class="fe fe-chevron-down"></i></span></a>
 
                                     <!-- submenu -->
                                     <ul role="menu" aria-labelledby="dropdownMenu" class="dropdown-menu ct-submenu__container">
-                                        <li class="dropdown-submenu"><a href="#" class="dropdown-item">Authorization Case</a></li>
-                                        <li class="dropdown-submenu"><a href="#" class="dropdown-item">Administrative Case</a></li>
+                                        <li class="dropdown-submenu"><a href="case-records.php" class="dropdown-item">Authorization Case</a></li>
+                                        <li class="dropdown-submenu"><a href="case-records.php" class="dropdown-item">Administrative Case</a></li>
                                     </ul>
                                 </li>
                                 <li class="ct-c-nav__item">

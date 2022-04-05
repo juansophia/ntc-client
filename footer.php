@@ -133,9 +133,21 @@
 </script>
 
 
-<!-- ADDED APR 1 2022 -->
-<!-- card with select2 dropdown -->
+<!-- added APR 4 2022 -->
+<!-- application type: card with select2 dropdown -->
+<script>
+    const select2_card = $('.frm__select-card .ct-card');
+    select2_card.on("click", function(e) {
+        e.preventDefault();
 
+        // add active class -- blue bg
+        select2_card.not(this).removeClass('selected');
+        $(this).addClass('selected');
+
+        // opens the select2 dropdown
+        $(this).find('.select2').select2('open');
+    });
+</script>
 
 </body>
 

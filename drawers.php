@@ -16,10 +16,10 @@ START: Case Details Drawer
             </div>
         </div>
         <div class="drawer-body">
-            <div class="bg--neutral br--sm p-3 d-flex justify-content-center align-items-center">
+            <div class="bg--neutral br--sm py-4 px-3 d-flex align-items-center">
                 <div class="d-flex flex-column ml-2">
-                    <span class="font--primary">Reference Number</span>
-                    <span class="text--xxl color--secondary font--tertiary">2019-223</span>
+                    <span class="font--primary color--primary-light">Reference Number: 0000008</span>
+                    <span class="text--xxl color--secondary font--primary">Case No: 2019-223</span>
                 </div>
             </div>
 

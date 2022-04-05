@@ -11,7 +11,7 @@ include("client-header.php");
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="ct-page__title">New Application</h1>
+                    <h1 class="ct-page__title">Application Type</h1>
                     <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
                         <nav aria-label="breadcrumb">
                             <ol class="ct-breadcrumb breadcrumb">
@@ -24,45 +24,134 @@ include("client-header.php");
                     </div>
 
                     <!-- steps -->
-                    <ul class="ct-stepper d-flex justify-content-center">
+                    <!-- <ul class="ct-stepper d-flex justify-content-center">
                         <li class="stepper-item done"> Registration, Certificate, Permit and Licenses </li>
                         <li class="stepper-item done">Station/Equipment / System/Others</li>
                         <li class="stepper-item">Lorem ipsum dolor sit.</li>
-                    </ul>
-
+                    </ul> -->
                     <!-- cards container -->
                     <div class="ct-application-cards">
-                        <div class="ct-cards-grid frm__radio-group">
+                        <div class="ct-cards-grid">
 
-                            <!-- card with overlay for choices [WITH CLASS: ct-card--withOverlay] -->
-                            <input class="input--hidden" type="radio" id="sample01" name="new-application-type">
-                            <label class="ct-card ct-card--colored ct-card--withOverlay" for="sample01">
-                                <h2 class="text--rg font--tertiary color--tertiary"> BTS</h2>
-                                <span class="hyperlink hyperlink--primary" href="#">Click here <i class="fe fe-arrow-right ml-2"></i></span>
+                            <!-- start : card with select2 dropdown  -->
+                            <div class="frm__select-card">
+                                <div class="ct-card ct-card--neutral">
+                                    <div>
+                                        <h2 class="text--rg font--tertiary color--tertiary"> Certificate of Authority (CA) / Provisional Authority (PA) </h2>
+                                        <span class="frm__select-text"></span>
+                                    </div>
 
-                                <!-- new or extention? -->
-                                <div class="ct-overlay-options">
-                                    <a class="btn btn--light br--xs" href="#">New</a>
-                                    <a class="btn btn--light br--xs" href="#">Extension</a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="font--tertiary color--tertiary">Click here </span>
+                                        <span class="btn btn--primary btn--icon-md btn--circle"><i class="fe fe-arrow-down font-weight-bold"></i></span>
+                                    </div>
+
+                                    <!--select2 dropdown-->
+                                    <select class="frm__input select2" name="sample">
+                                        <option value="A">OPTION 1</option>
+                                        <option value="A">OPTION 2</option>
+                                        <option value="A">OPTION 3</option>
+                                        <option value="A">OPTION 4</option>
+                                        <option value="A">OPTION 5</option>
+
+                                    </select>
+                                    <!--/select2 dropdown-->
                                 </div>
-                            </label>
+                            </div>
 
-                            <!-- card  -->
-                            <input class="input--hidden" type="radio" id="sample02" name="new-application-type">
-                            <label class="ct-card ct-card--colored" for="sample02">
-                                <h2 class="text--rg font--tertiary color--tertiary"> Fixed (FX) – (MW/WDN)</h2>
-                                <span class="hyperlink hyperlink--primary" href="#">Click here <i class="fe fe-arrow-right ml-2"></i></span>
-                            </label>
+                            <!-- start : card with select2 dropdown  -->
+                            <div class="frm__select-card">
+                                <div class="ct-card ct-card--neutral selected">
+                                    <div>
+                                        <h2 class="text--rg font--tertiary color--tertiary"> Certificate of Authority (CA) / Provisional Authority (PA) </h2>
+                                        <span class="frm__select-text">New</span>
+                                    </div>
 
-                            <!-- card -->
-                            <input class="input--hidden" type="radio" id="sample03" name="new-application-type">
-                            <label class="ct-card ct-card--colored" for="sample03">
-                                <h2 class="text--rg font--tertiary color--tertiary"> Land Base (FB) – (BTS/WLL/BWA/WDN) </h2>
-                                <span class="hyperlink hyperlink--primary" href="#">Click here <i class="fe fe-arrow-right ml-2"></i></span>
-                            </label>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="font--tertiary color--tertiary">Click here </span>
+                                        <span class="btn btn--primary btn--icon-md btn--circle"><i class="fe fe-arrow-down font-weight-bold"></i></span>
+                                    </div>
 
+                                    <!--select2 dropdown-->
+                                    <select class="frm__input select2" name="sample">
+                                        <option value="A">New</option>
+                                        <option value="B">Lorem</option>
+                                    </select>
+                                    <!--/select2 dropdown-->
+                                </div>
+                            </div>
+
+                            <!-- start : card with select2 dropdown  -->
+                            <div class="frm__select-card">
+                                <div class="ct-card ct-card--neutral">
+                                    <div>
+                                        <h2 class="text--rg font--tertiary color--tertiary">
+                                            Certificate of Public
+                                            Convenience and Necessity
+                                            (CPCN) /Provisional
+                                            Authority (PA)
+                                        </h2>
+                                        <span class="frm__select-text"></span>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="font--tertiary color--tertiary">Click here </span>
+                                        <span class="btn btn--primary btn--icon-md btn--circle"><i class="fe fe-arrow-down font-weight-bold"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- start : card with select2 dropdown  -->
+                            <div class="frm__select-card">
+                                <div class="ct-card ct-card--neutral">
+                                    <div>
+                                        <h2 class="text--rg font--tertiary color--tertiary">
+                                            Pleading
+                                        </h2>
+                                        <span class="frm__select-text"></span>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="font--tertiary color--tertiary">Click here </span>
+                                        <span class="btn btn--primary btn--icon-md btn--circle"><i class="fe fe-arrow-down font-weight-bold"></i></span>
+                                    </div>
+
+                                    <!--select2 dropdown-->
+                                    <select class="frm__input select2" name="sample">
+                                        <option>Application/Petition</option>
+                                        <option>Joint Petition</option>
+                                        <option>Formal Offer Of Evidence (Foe)</option>
+                                        <option>Oppositor’s Formal Offer Of Evidence</option>
+                                        <option>Motion For Extension Of Provisional Authority</option>
+                                        <option>Motion To Resolve Pending Motion For Extension Of PA</option>
+                                        <option>Motion For Extension Of Certificate Of Authority </option>
+                                        <option>Motion For Extension/Renewal Of Certificate Of Authority </option>
+
+
+                                    </select>
+                                    <!--/select2 dropdown-->
+                                </div>
+                            </div>
+
+                            <!-- start : card with select2 dropdown  -->
+                            <div class="frm__select-card">
+                                <div class="ct-card ct-card--neutral">
+                                    <div>
+                                        <h2 class="text--rg font--tertiary color--tertiary">
+                                            Others
+                                        </h2>
+                                        <span class="frm__select-text"></span>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="font--tertiary color--tertiary">Click here </span>
+                                        <span class="btn btn--primary btn--icon-md btn--circle"><i class="fe fe-arrow-down font-weight-bold"></i></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
 
                     <!-- cta -->
                     <div class="d-flex justify-content-end mt-3">
