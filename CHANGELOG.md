@@ -12,6 +12,15 @@ Removed for now removed features.
 Fixed for any bug fixes.
 Security in case of vulnerabilities.
 
+## [1.0.0] - 2022-04-06
+### Changed
+- Changed structure of  banners for email
+- Changed the shade of blue & border radius for email
+
+### Added
+- Added SOA pdf
+
+
 ## [1.0.0] - 2022-04-05
 ### Changed
 - Reduced whitespace on forms and data columns
