@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
         <meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
         <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"> <!-- Tell iOS not to automatically link certain text strings. -->
-        <title>Permit to Purchase-2nd page</title>
+        <title>Notice of Deficiency</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
@@ -19,7 +19,8 @@
             */
             * {
                 font-family: 'Open Sans', sans-serif !important;
-                font-size: 12px;
+                font-size: 16px;
+                line-height: 1.6;
             }
 
             .text--black {
@@ -118,7 +119,7 @@
             .table--with-border,
             .table--with-border td,
             .table--with-border th {
-                border: 1px solid #8499B2;
+                border: 1px solid #000;
             }
 
             .table--with-border td,
@@ -126,9 +127,20 @@
                 padding: 10px 12px;
             }
 
-            .table--sm td *,
-            .table--sm th * {
+            .table--sm td,
+            .table--sm th {
+                padding: 5px;
+            }
+
+            .table--sm th {
                 font-size: 10px;
+            }
+
+            .table--sm td *,
+            .table--sm th *,
+            .table--sm {
+                font-size: 10px;
+                line-height: 1.2;
             }
 
             /* added utility classes */
@@ -167,66 +179,96 @@
     <body width="100%" style="margin: 0; padding: 0 !important; background-color: #fff;">
         <center style="width: 100%; background-color: #F6F6F6;">
             <div style="max-width: 794px; height: 1122px; margin: 0 auto; background-color: #fff;" class="email-container">
-                <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto; padding: 20px 20px 20px;">
-                    <!-- EQUIPMENTS -->
+                <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto; padding: 80px 20px 20px;">
+                    <!-- ADDRESS -->
                     <tr>
                         <td align="left" valign="top" style="background-color: #ffffff; padding: 0px 20px;" class="td__block">
                             <table>
                                 <tr>
-                                    <td style="width: 220px;">LICENSE:</td>
-                                    <td style="font-weight: bold;">GLOBE TELECOM, INC. </td>
+                                    <td> <span>07 January 2021</span></td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 220px;">RSPD FAS REF. NO.: </td>
-                                    <td style="font-weight: bold;">110918-32P</td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 220px;">RSFD FAS DATE ISSUED:</td>
-                                    <td style="font-weight: bold;">February 12, 2019</td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 220px;">PERMIT NO.:</td>
-                                    <td style="font-weight: bold;">2021-06-0032/PUR</td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 220px;">PPP DATE ISSUED: </td>
-                                    <td style="font-weight: bold;">June 11, 2021</td>
+                                    <td style="padding-top: 20px;">
+                                        <b class="d-block">MR.SOTERO B. MONTAÑO, JR.</b>
+                                        <span class="d-block">Senior Manager, NTC Licensing</span>
+                                        <b class="d-block">GLOBE TELECOM, INC.</b>
+                                        <span class="d-block">The Globe Tower, 32nd St. cor. 7th Ave.</span>
+                                        <span class="d-block">Bonifacion Global City, Taguig 1634</span>
+                                    </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
-                    <!-- TABLE -->
+                    <!-- BODY -->
                     <tr>
-                        <td align="left" valign="top" style="background-color: #ffffff; padding: 10px 20px; padding-bottom: 20px;" class="td__block">
-                            <table class="table--with-border table--sm">
+                        <td align="left" valign="top" style="background-color: #ffffff; padding: 30px 20px 0px;" class="td__block">
+                            <table>
                                 <tr>
-                                    <th style="text-align: center;" rowspan="2"> <b>NO.</b> </th>
-                                    <th style="text-align: center;" rowspan="2"> <b>SITE NAME</b> </th>
-                                    <th style="text-align: center;" rowspan="2"> <b>CALL SIGN</b> </th>
-                                    <th style="text-align: center;" colspan="2"> <b>FRQUENCY (MHz)</b> </th>
-                                    <th style="text-align: center;" rowspan="2"> <b>POL</b> </th>
-                                    <th style="text-align: center;" rowspan="2"> <b>POWER OUTPUT (KW)</b> </th>
-                                    <th style="text-align: center;" rowspan="2"> <b>MAKE/TYPE/ MODEL</b> </th>
-                                    <th style="text-align: center;" rowspan="2"> <b>SERIAL NO. </b> </th>
-                                </tr>
-                                <tr>
-                                    <th style="text-align: center;"> <b>TX</b> </th>
-                                    <th style="text-align: center;"> <b>RX</b> </th>
+                                    <td> <span>Dear Mr. Montano,</span></td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="d-block">1</span>
+                                        <p>This has reference to <b>Globe Telecom, INC.’s</b> applications for Radio Licenses (RSL) Renewal, field on 04 December 2020, and still pending with the Networks and Facilities Division, Regulation Branch due to some requirement deficiency/ies, to wit:</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- DATA TABLE -->
+                    <tr>
+                        <td align="left" valign="top" style="background-color: #ffffff; padding: 10px 20px;" class="td__block">
+                            <table class="table--with-border table--black">
+                                <!-- theading -->
+                                <tr>
+                                    <th style="text-align: center;" colspan="4"> <b style="font-size: 14px;">Application Details</b> </th>
+                                    <th style="text-align: center;" rowspan=" 2"> <b style="font-size: 14px;">For Submission/Compliance</b> </th>
+                                </tr>
+                                <tr>
+                                    <th style="text-align: center; border-bottom: none;"> <b style="font-size: 14px;">OR No.</b> </th>
+                                    <th style="text-align: center; border-bottom: none;"> <b style="font-size: 14px;">Date of Payment</b></th>
+                                    <th style="text-align: center; border-bottom: none;"> <b style="font-size: 14px;">1st Station</b></th>
+                                    <th style="text-align: center; border-bottom: none;"> <b style="font-size: 14px;">Last Station</b></th>
+                                </tr>
+                                <!-- tbody -->
+                                <tr>
+                                    <td>
+                                        <span class="d-block" style="text-align: center; font-size: 13px;">1361193</span>
                                     </td>
                                     <td>
-                                        <span class="d-block" style="white-space: nowrap;">INOSLUBANLIPL</span>
+                                        <span class="d-block" style="text-align: center; font-size: 13px;">11/27/2020</span>
                                     </td>
                                     <td>
-                                        <span class="d-block" style="white-space: nowrap; font-size: 8px;">4DC-642ab;</span>
-                                        <span class="d-block" style="white-space: nowrap; font-size: 8px;">4DC-642ab-001;</span>
-                                        <span class="d-block" style="white-space: nowrap; font-size: 8px;">4DC-642ab-001;</span>
+                                        <span class="d-block" style="text-align: center; font-size: 13px;">IMUS2H</span>
                                     </td>
                                     <td>
-                                        <span class="d-block" style="white-space: nowrap; font-size: 8px;">703.00-720.50</span>
+                                        <span class="d-block" style="text-align: center; font-size: 13px;">TIAOHLH</span>
+                                    </td>
+                                    <td>
+                                        <span class="d-block" style="text-align: center; font-size: 13px;">Copy of Radio Station Licenses</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                        <td align="left" valign="top" style="background-color: #ffffff; padding: 0px 20px 20px;" class="td__block">
+                            <table>
+                                <tr>
+                                    <td class="padding-top: 20px">
+                                        <p>In this regard, we are requesting you to submit the said requirement/s the soonest possible time to facilitate the immediate processing of your application/s.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="padding-top: 30px">
+                                        <span>Very truly yours,</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top: 30px;">
+                                        <b class="d-block">IMELDA R.WALCIEN</b>
+                                        <span class="d-block">Acting Director II</span>
+                                        <span class="d-block">Regulation Branch</span>
                                     </td>
                                 </tr>
                             </table>
